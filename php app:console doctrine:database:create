@@ -1,0 +1,63 @@
+php app/console doctrine:database:create
+php app/console doctrine:generate:entity
+php app/console doctrine:generate:entities BackendBundle/Entity/Deadline
+php app/console generate:doctrine:crud
+php app/console doctrine:schema:validate
+php app/console doctrine:schema:update --force
+
+mysqldump -u root -p ipre > ipre_hash.sql
+
+UPDATE wpi2030_blogs SET domain = replace(domain, 'http://blogsing2030.ipre.ing.uc.cl/', 'http://blogsing2030.investigacion.ing.uc.cl');
+
+
+SELECT LEFT(rut,POSITION('-' IN rut)-1) FROM users
+
+UPDATE users SET rut = MD5(LEFT(rut,POSITION('-' IN rut)-1)) WHERE type <> 3;
+
+UPDATE students SET number = MD5(number);
+
+exit(\Doctrine\Common\Util\Debug::dump($classCodeObject)[0]);
+php app/console doctrine:query:sql "select COLUMN_NAME from INFORMATION_SCHEMA.COLUMNS where TABLE_NAME='research'"
+
+$this->addFlash(
+    'notice',
+    array(
+        'alert' => 'danger',// danger, warning, info, success
+        'title' => 'Duplicado: ',
+        'message' => 'Uno o mas datos pertenecen a un usuario existente, intente nuevamente o Inicie Sesión'
+    )
+);
+
+gddy
+ZX#Zg3jOoOAkEg cp
+Cm&4djmTNXo9IV wp
+
+heroku config:set SECRET=f3bb896506e84e0b2ec954bafecbe8479a08f20b
+
+UPDATE table_name SET column1=value1,column2=value2,... WHERE some_column=some_value;
+
+DELETE FROM table_name WHERE some_column=some_value;
+
+
+LOGS:
+/var/log/httpd
+
+Vhost:
+/etc/httpd/conf.d
+
+
+http://stackoverflow.com/questions/17666249/how-to-import-an-sql-file-using-the-command-line-in-mysql
+
+gestionipre
+sbGTWkW4GehXUggR
+
+export SYMFONY_ENV=prod
+
+php app/console cache:clear --env=prod --no-debug
+
+rm -rf app/cache/*
+rm -rf app/logs/*
+rm -rf web/uploads/*
+
+php app/console cache:clear --env=prod --no-debug
+sudo service httpd restart
