@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Concurso</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ concurso.id }}</td>
+            </tr>
+            <tr>
+                <th>Fechainicio</th>
+                <td>{{ concurso.fechaInicio }}</td>
+            </tr>
+            <tr>
+                <th>Fechafinal</th>
+                <td>{% if concurso.fechaFinal %}{{ concurso.fechaFinal|date('Y-m-d H:i:s') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Nombre</th>
+                <td>{{ concurso.nombre }}</td>
+            </tr>
+            <tr>
+                <th>Link</th>
+                <td>{{ concurso.link }}</td>
+            </tr>
+            <tr>
+                <th>Descripcion</th>
+                <td>{{ concurso.descripcion }}</td>
+            </tr>
+            <tr>
+                <th>Color</th>
+                <td>{{ concurso.color }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('concurso_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('concurso_edit', { 'id': concurso.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

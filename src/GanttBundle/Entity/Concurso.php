@@ -63,6 +63,12 @@ class Concurso
      */
     private $color;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="FondoLinea", inversedBy="concursos")
+     * @ORM\JoinColumn(name="fondolinea_id", referencedColumnName="id")
+     */
+    private $fondolinea;
+
 
     /**
      * Get id
@@ -210,5 +216,28 @@ class Concurso
     public function getColor()
     {
         return $this->color;
+    }
+
+    /**
+     * Set fondolinea
+     *
+     * @param \GanttBundle\Entity\FondoLinea $fondolinea
+     * @return Concurso
+     */
+    public function setFondolinea(\GanttBundle\Entity\FondoLinea $fondolinea = null)
+    {
+        $this->fondolinea = $fondolinea;
+
+        return $this;
+    }
+
+    /**
+     * Get fondolinea
+     *
+     * @return \GanttBundle\Entity\FondoLinea 
+     */
+    public function getFondolinea()
+    {
+        return $this->fondolinea;
     }
 }

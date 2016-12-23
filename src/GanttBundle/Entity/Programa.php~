@@ -1,0 +1,79 @@
+<?php
+
+namespace GanttBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Programa
+ *
+ * @ORM\Table(name="programa")
+ * @ORM\Entity(repositoryClass="GanttBundle\Repository\ProgramaRepository")
+ */
+class Programa
+{
+    /**
+     * @var int
+     *
+     * @ORM\Column(name="id", type="integer")
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="AUTO")
+     */
+    private $id;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nombre", type="string", length=255)
+     */
+    private $nombre;
+
+    /**
+     * @ORM\ManyToOne(targetEntity="Agencia", inversedBy="programas")
+     * @ORM\JoinColumn(name="agencia_id", referencedColumnName="id")
+     */
+    private $agencia;
+
+    /**
+     * @ORM\OneToMany(targetEntity="FondoLinea", mappedBy="programa")
+     */
+    private $fondoslineas;
+
+    public function __construct() {
+        $this->fondoslineas = new ArrayCollection();
+    }
+
+
+    /**
+     * Get id
+     *
+     * @return integer 
+     */
+    public function getId()
+    {
+        return $this->id;
+    }
+
+    /**
+     * Set nombre
+     *
+     * @param string $nombre
+     * @return Programa
+     */
+    public function setNombre($nombre)
+    {
+        $this->nombre = $nombre;
+
+        return $this;
+    }
+
+    /**
+     * Get nombre
+     *
+     * @return string 
+     */
+    public function getNombre()
+    {
+        return $this->nombre;
+    }
+}

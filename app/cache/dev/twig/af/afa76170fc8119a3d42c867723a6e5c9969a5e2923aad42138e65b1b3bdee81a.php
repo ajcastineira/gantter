@@ -1,0 +1,174 @@
+<?php
+
+/* programa/index.html.twig */
+class __TwigTemplate_d2c058e5ebb0452e4e4fad0fca1b6387767c46a24f8219e29add814e1a7e9bf4 extends Twig_Template
+{
+    public function __construct(Twig_Environment $env)
+    {
+        parent::__construct($env);
+
+        // line 1
+        $this->parent = $this->loadTemplate("base.html.twig", "programa/index.html.twig", 1);
+        $this->blocks = array(
+            'body' => array($this, 'block_body'),
+        );
+    }
+
+    protected function doGetParent(array $context)
+    {
+        return "base.html.twig";
+    }
+
+    protected function doDisplay(array $context, array $blocks = array())
+    {
+        $__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74->enter($__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "programa/index.html.twig"));
+
+        $this->parent->display($context, array_merge($this->blocks, $blocks));
+        
+        $__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74->leave($__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74_prof);
+
+    }
+
+    // line 3
+    public function block_body($context, array $blocks = array())
+    {
+        $__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a->enter($__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+
+        // line 4
+        echo "    <h1>Programas list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        ";
+        // line 15
+        $context['_parent'] = $context;
+        $context['_seq'] = twig_ensure_traversable((isset($context["programas"]) ? $context["programas"] : $this->getContext($context, "programas")));
+        foreach ($context['_seq'] as $context["_key"] => $context["programa"]) {
+            // line 16
+            echo "            <tr>
+                <td><a href=\"";
+            // line 17
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_show", array("id" => $this->getAttribute($context["programa"], "id", array()))), "html", null, true);
+            echo "\">";
+            echo twig_escape_filter($this->env, $this->getAttribute($context["programa"], "id", array()), "html", null, true);
+            echo "</a></td>
+                <td>";
+            // line 18
+            echo twig_escape_filter($this->env, $this->getAttribute($context["programa"], "nombre", array()), "html", null, true);
+            echo "</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href=\"";
+            // line 22
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_show", array("id" => $this->getAttribute($context["programa"], "id", array()))), "html", null, true);
+            echo "\">show</a>
+                        </li>
+                        <li>
+                            <a href=\"";
+            // line 25
+            echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_edit", array("id" => $this->getAttribute($context["programa"], "id", array()))), "html", null, true);
+            echo "\">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        ";
+        }
+        $_parent = $context['_parent'];
+        unset($context['_seq'], $context['_iterated'], $context['_key'], $context['programa'], $context['_parent'], $context['loop']);
+        $context = array_intersect_key($context, $_parent) + $_parent;
+        // line 31
+        echo "        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href=\"";
+        // line 36
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_new");
+        echo "\">Create a new programa</a>
+        </li>
+    </ul>
+";
+        
+        $__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a->leave($__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a_prof);
+
+    }
+
+    public function getTemplateName()
+    {
+        return "programa/index.html.twig";
+    }
+
+    public function isTraitable()
+    {
+        return false;
+    }
+
+    public function getDebugInfo()
+    {
+        return array (  98 => 36,  91 => 31,  79 => 25,  73 => 22,  66 => 18,  60 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
+    }
+
+    /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
+    public function getSource()
+    {
+        @trigger_error('The '.__METHOD__.' method is deprecated since version 1.27 and will be removed in 2.0. Use getSourceContext() instead.', E_USER_DEPRECATED);
+
+        return $this->getSourceContext()->getCode();
+    }
+
+    public function getSourceContext()
+    {
+        return new Twig_Source("{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Programas list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for programa in programas %}
+            <tr>
+                <td><a href=\"{{ path('programa_show', { 'id': programa.id }) }}\">{{ programa.id }}</a></td>
+                <td>{{ programa.nombre }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href=\"{{ path('programa_show', { 'id': programa.id }) }}\">show</a>
+                        </li>
+                        <li>
+                            <a href=\"{{ path('programa_edit', { 'id': programa.id }) }}\">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href=\"{{ path('programa_new') }}\">Create a new programa</a>
+        </li>
+    </ul>
+{% endblock %}
+", "programa/index.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/programa/index.html.twig");
+    }
+}

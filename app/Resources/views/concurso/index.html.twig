@@ -1,0 +1,49 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Concursos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Fechainicio</th>
+                <th>Fechafinal</th>
+                <th>Nombre</th>
+                <th>Link</th>
+                <th>Descripcion</th>
+                <th>Color</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for concurso in concursos %}
+            <tr>
+                <td><a href="{{ path('concurso_show', { 'id': concurso.id }) }}">{{ concurso.id }}</a></td>
+                <td>{{ concurso.fechaInicio }}</td>
+                <td>{% if concurso.fechaFinal %}{{ concurso.fechaFinal|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ concurso.nombre }}</td>
+                <td>{{ concurso.link }}</td>
+                <td>{{ concurso.descripcion }}</td>
+                <td>{{ concurso.color }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('concurso_show', { 'id': concurso.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('concurso_edit', { 'id': concurso.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('concurso_new') }}">Create a new concurso</a>
+        </li>
+    </ul>
+{% endblock %}

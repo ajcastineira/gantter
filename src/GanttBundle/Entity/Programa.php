@@ -5,6 +5,7 @@ namespace GanttBundle\Entity;
 use Doctrine\ORM\Mapping as ORM;
 use Doctrine\Common\Collections\ArrayCollection;
 
+
 /**
  * Programa
  *
@@ -25,17 +26,23 @@ class Programa
     /**
      * @var string
      *
-     * @ORM\Column(name="nombre", type="string", length=50)
+     * @ORM\Column(name="nombre", type="string", length=255)
      */
     private $nombre;
 
     /**
-     * @ORM\OneToMany(targetEntity="Fondo", mappedBy="programa")
+     * @ORM\ManyToOne(targetEntity="Agencia", inversedBy="programas")
+     * @ORM\JoinColumn(name="agencia_id", referencedColumnName="id")
      */
-    private $fondos;
+    private $agencia;
+
+    /**
+     * @ORM\OneToMany(targetEntity="FondoLinea", mappedBy="programa")
+     */
+    private $fondoslineas;
 
     public function __construct() {
-        $this->fondos = new ArrayCollection();
+        $this->fondoslineas = new ArrayCollection();
     }
 
 
@@ -70,5 +77,61 @@ class Programa
     public function getNombre()
     {
         return $this->nombre;
+    }
+
+    /**
+     * Set agencia
+     *
+     * @param \GanttBundle\Entity\Agencia $agencia
+     * @return Programa
+     */
+    public function setAgencia(\GanttBundle\Entity\Agencia $agencia = null)
+    {
+        $this->agencia = $agencia;
+
+        return $this;
+    }
+
+    /**
+     * Get agencia
+     *
+     * @return \GanttBundle\Entity\Agencia 
+     */
+    public function getAgencia()
+    {
+        return $this->agencia;
+    }
+
+    /**
+     * Add fondoslineas
+     *
+     * @param \GanttBundle\Entity\FondoLinea $fondoslineas
+     * @return Programa
+     */
+    public function addFondoslinea(\GanttBundle\Entity\FondoLinea $fondoslineas)
+    {
+        $this->fondoslineas[] = $fondoslineas;
+
+        return $this;
+    }
+
+    /**
+     * Remove fondoslineas
+     *
+     * @param \GanttBundle\Entity\FondoLinea $fondoslineas
+     */
+    public function removeFondoslinea(\GanttBundle\Entity\FondoLinea $fondoslineas)
+    {
+        $this->fondoslineas->removeElement($fondoslineas);
+    }
+
+    /**
+     * Get fondoslineas
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getFondoslineas()
+    {
+        return $this->fondoslineas;
     }
 }

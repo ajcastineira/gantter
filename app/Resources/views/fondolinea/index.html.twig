@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Fondolineas list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Nombre</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for fondoLinea in fondoLineas %}
+            <tr>
+                <td><a href="{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}">{{ fondoLinea.id }}</a></td>
+                <td>{{ fondoLinea.nombre }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('fondolinea_edit', { 'id': fondoLinea.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('fondolinea_new') }}">Create a new fondoLinea</a>
+        </li>
+    </ul>
+{% endblock %}

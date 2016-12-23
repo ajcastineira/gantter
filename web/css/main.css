@@ -1,0 +1,166 @@
+html {
+    display: table;
+    margin: auto;
+}
+
+header {
+  width:100%;
+  position:absolute;
+  top:0;
+  left:0;
+}
+
+/**************** Navbar ********************/
+.navbar-inverse {
+  background-color: #2f549e;
+  border-color: #274685;
+}
+
+.navbar-inverse .navbar-brand, .navbar-inverse .navbar-nav>li>a {
+  color: White;
+}
+
+.navbar-inverse .navbar-brand:hover, .navbar-inverse .navbar-nav>li>a:hover {
+  background-color: #2f549e;
+}
+
+.dropdown-menu>li>a {
+  color: #2f549e;
+}
+
+.dropdown-menu>li>a:hover {
+  color: #fe9510;
+}
+/**************** Fin Navbar ********************/
+
+body {
+    display: table-cell;
+    vertical-align: middle;
+    width: 1024px;
+    padding-top: 70px;
+    padding-bottom: 50px;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: #2f549e;
+  font-family: Helvetica, Arial, sans-serif;
+  font-variant: small-caps;
+
+  font-stretch:normal;
+  font-style:normal;
+  font-variant:normal;
+  font-weight:bold;
+}
+
+label {
+  margin-top: 7px;
+  margin-bottom: 3px;
+}
+
+/**************** links ********************/
+.nclink {
+    color: #2f549e ;
+}
+
+.nclink:visited {
+    color: #2f549e;
+}
+
+a.nclink:hover {
+    color: #fe9510;
+}
+
+.nclink:active {
+    color: #fe9510;
+}
+
+/**************** Fin links ********************/
+
+.pagination>.active>a {
+  background-color: #2f549e;
+  border-color: #274685;
+}
+
+/**************** Buttons ********************/
+
+.btn-primary, .btn-success, .btn-info, .btn-warning {
+    color: White;
+    background-color: #2f549e;
+    border-color: #274685;
+}
+
+.btn-primary:hover, .btn-success:hover, .btn-info:hover, .btn-warning:hover {
+    color: White;
+    background-color: #fe9510;
+    border-color: #E6C400;
+}
+
+.btn-danger {
+    color: White;
+    background-color: #fe9510;
+    border-color: #E6C400;
+}
+
+.btn-danger:hover {
+    color: White;
+    background-color: #363534;
+    border-color: Black;
+}
+/**************** Fin Buttons ********************/
+
+.btn1, .btn2{
+  float: left;
+  margin: 5px;
+  margin-top: 30px;
+}
+
+.btn3{
+  margin: 5px;
+  margin-top: 30px;
+}
+
+#column-container {
+  float:left;
+  width:100%;
+}
+#col-left {
+  float:left;
+  width:48%;
+}
+#col-right {
+  float:left;
+  width:48%;
+  margin-left: 4%;
+}
+
+.group-form{
+    background-color: #fff;
+    border-color: #ddd;
+    border-width: 1px;
+    border-radius: 4px;
+    box-shadow: none;
+
+    position: relative;
+    padding: 15px 15px 15px;
+    border-style: solid;
+    margin-bottom: 15px;
+}
+.required:after{
+  content: " *";
+  color: red;
+}
+
+.tagline{
+  margin-bottom: 3px;
+}
+
+.puzzle404
+{
+  top: -10px;
+  position: relative;
+}
+
+.no-padding-right
+{
+  padding-right: 0px;
+}
