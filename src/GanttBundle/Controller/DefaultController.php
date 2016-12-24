@@ -12,6 +12,12 @@ class DefaultController extends Controller
      */
     public function indexAction()
     {
-        return $this->render('GanttBundle:Default:index.html.twig');
+    	$em = $this->getDoctrine()->getManager();
+
+        $agencias = $em->getRepository('GanttBundle:Agencia')->findAll();
+
+        return $this->render('GanttBundle:Default:index.html.twig', array(
+            'agencias' => $agencias,
+        ));
     }
 }

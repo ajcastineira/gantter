@@ -11,7 +11,7 @@
             </tr>
             <tr>
                 <th>Fechainicio</th>
-                <td>{{ concurso.fechaInicio }}</td>
+                <td>{% if concurso.fechaInicio %}{{ concurso.fechaInicio|date('Y-m-d H:i:s') }}{% endif %}</td>
             </tr>
             <tr>
                 <th>Fechafinal</th>

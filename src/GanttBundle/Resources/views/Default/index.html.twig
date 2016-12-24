@@ -2,4 +2,60 @@
 
 {% block body %}
     <h1>Bienvenido a Gantter</h1>
+
+    {% for agencia in agencias %}
+    	<strong>{{ agencia.nombre }} </strong></br>
+
+    	<table class="table table-bordered">
+
+	    	{% for programa in agencia.getProgramas() %}
+	    		<thead>
+		            <tr>
+		                <th>{{ programa.nombre }}</th>
+		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+		                <th>Enero</th>
+		                <th>Febrero</th>
+		                <th>Marzo</th>
+		                <th>Abril</th>
+		                <th>Mayo</th>
+		                <th>Junio</th>
+		                <th>Julio</th>
+		                <th>Agosto</th>
+		                <th>Septiembre</th>
+		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+		            </tr>
+		        </thead>
+		        <tbody>
+
+		    		{% for fondolinea in programa.getFondosLineas() %}
+		    			<tr>
+		    				<td>{{ fondolinea.nombre }}</td>
+
+		    				<td></td>
+
+		    				{% if fondolinea.getConcursos()|length == 0 %}
+		    					<td></td>
+		    					<td></td>
+		    				{% endif %}
+
+				    		{% for concurso in fondolinea.getConcursos() %}
+					    		<td style="background: #{{concurso.color}};"><a href="{{ concurso.link}}">{{ concurso.nombre }}</a></td>
+					    	{% endfor %}
+
+					    	
+					    	<td></td>
+					    	<td></td>
+					    	<td></td>
+					    	<td></td>
+					    	<td></td>
+					    	<td></td>
+					    </tr>
+
+			    	{% endfor %}
+		    	</tbody>
+
+	    	{% endfor %}
+    	</table>
+
+    {% endfor %}
 {% endblock %}
