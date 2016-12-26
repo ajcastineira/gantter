@@ -240,4 +240,13 @@ class Concurso
     {
         return $this->fondolinea;
     }
+
+    public function getMonthsLength()
+    {
+        $d2 = new \DateTime($this->fechaFinal->format('Y').'-'.$this->fechaFinal->format('m').'-1');
+        $hoy = new \DateTime();
+        $d1 = new \DateTime($this->fechaInicio->format('Y').'-'.$this->fechaInicio->format('m').'-1');
+
+        return intval($d1->diff($d2)->format('%m')) + 1;
+    }
 }

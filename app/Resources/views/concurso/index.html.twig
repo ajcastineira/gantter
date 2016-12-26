@@ -20,8 +20,8 @@
         {% for concurso in concursos %}
             <tr>
                 <td><a href="{{ path('concurso_show', { 'id': concurso.id }) }}">{{ concurso.id }}</a></td>
-                <td>{{ concurso.fechaInicio }}</td>
-                <td>{% if concurso.fechaFinal %}{{ concurso.fechaFinal|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ concurso.fechaInicio|date('d-m-Y H:i:s') }}</td>
+                <td>{% if concurso.fechaFinal %}{{ concurso.fechaFinal|date('d-m-Y H:i:s') }}{% endif %}</td>
                 <td>{{ concurso.nombre }}</td>
                 <td>{{ concurso.link }}</td>
                 <td>{{ concurso.descripcion }}</td>

@@ -21,20 +21,20 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_f76e89837494d8033295cf522668e8099d0e242919d1c907971e61be75ed6dc7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_f76e89837494d8033295cf522668e8099d0e242919d1c907971e61be75ed6dc7->enter($__internal_f76e89837494d8033295cf522668e8099d0e242919d1c907971e61be75ed6dc7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/index.html.twig"));
+        $__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7->enter($__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_f76e89837494d8033295cf522668e8099d0e242919d1c907971e61be75ed6dc7->leave($__internal_f76e89837494d8033295cf522668e8099d0e242919d1c907971e61be75ed6dc7_prof);
+        $__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7->leave($__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_4de0f14c9f7219a7589802559edc336117415f8cc1169fa6f2e683091f5b843e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4de0f14c9f7219a7589802559edc336117415f8cc1169fa6f2e683091f5b843e->enter($__internal_4de0f14c9f7219a7589802559edc336117415f8cc1169fa6f2e683091f5b843e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb->enter($__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Concursos list</h1>
@@ -68,12 +68,12 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
             echo "</a></td>
                 <td>";
             // line 23
-            echo twig_escape_filter($this->env, $this->getAttribute($context["concurso"], "fechaInicio", array()), "html", null, true);
+            echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "fechaInicio", array()), "d-m-Y H:i:s"), "html", null, true);
             echo "</td>
                 <td>";
             // line 24
             if ($this->getAttribute($context["concurso"], "fechaFinal", array())) {
-                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "fechaFinal", array()), "Y-m-d H:i:s"), "html", null, true);
+                echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "fechaFinal", array()), "d-m-Y H:i:s"), "html", null, true);
             }
             echo "</td>
                 <td>";
@@ -128,7 +128,7 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
     </ul>
 ";
         
-        $__internal_4de0f14c9f7219a7589802559edc336117415f8cc1169fa6f2e683091f5b843e->leave($__internal_4de0f14c9f7219a7589802559edc336117415f8cc1169fa6f2e683091f5b843e_prof);
+        $__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb->leave($__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb_prof);
 
     }
 
@@ -179,8 +179,8 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
         {% for concurso in concursos %}
             <tr>
                 <td><a href=\"{{ path('concurso_show', { 'id': concurso.id }) }}\">{{ concurso.id }}</a></td>
-                <td>{{ concurso.fechaInicio }}</td>
-                <td>{% if concurso.fechaFinal %}{{ concurso.fechaFinal|date('Y-m-d H:i:s') }}{% endif %}</td>
+                <td>{{ concurso.fechaInicio|date('d-m-Y H:i:s') }}</td>
+                <td>{% if concurso.fechaFinal %}{{ concurso.fechaFinal|date('d-m-Y H:i:s') }}{% endif %}</td>
                 <td>{{ concurso.nombre }}</td>
                 <td>{{ concurso.link }}</td>
                 <td>{{ concurso.descripcion }}</td>

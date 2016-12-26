@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Bienvenido a Gantter</h1>
+    <h1>Bienvenido a Gantter {{latestDeadline|date("d/m/Y")}} {{monthsInterval}}</h1>
 
     {% for agencia in agencias %}
     	<strong>{{ agencia.nombre }} </strong></br>
@@ -13,15 +13,9 @@
 		            <tr>
 		                <th>{{ programa.nombre }}</th>
 		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		                <th>Enero</th>
-		                <th>Febrero</th>
-		                <th>Marzo</th>
-		                <th>Abril</th>
-		                <th>Mayo</th>
-		                <th>Junio</th>
-		                <th>Julio</th>
-		                <th>Agosto</th>
-		                <th>Septiembre</th>
+		                {% for m in range(0, monthsInterval) %}
+		                	<th>{{ hoy|date_modify('+' ~ m ~ 'months') | date('M') }}</th>
+		                {% endfor %}
 		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		            </tr>
 		        </thead>
@@ -30,25 +24,33 @@
 		    		{% for fondolinea in programa.getFondosLineas() %}
 		    			<tr>
 		    				<td>{{ fondolinea.nombre }}</td>
+		    				{% set busyLeft = 0 %}
 
-		    				<td></td>
+					    	<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+			                {% for m in range(0, monthsInterval) %}
+			                	{% if busyLeft > 0 %}
+			                		{% set busyLeft = busyLeft - 1 %}
+			                	{% else %}
 
-		    				{% if fondolinea.getConcursos()|length == 0 %}
-		    					<td></td>
-		    					<td></td>
-		    				{% endif %}
+				                	{% set columnDate =  hoy|date_modify('+' ~ m ~ 'months') %}
+				                	{% set free = true %}
 
-				    		{% for concurso in fondolinea.getConcursos() %}
-					    		<td style="background: #{{concurso.color}};"><a href="{{ concurso.link}}">{{ concurso.nombre }}</a></td>
-					    	{% endfor %}
+				                	{% for concurso in fondolinea.getConcursos() %}
+				                		{% if concurso.getFechaInicio()|date('Y-m') == columnDate | date('Y-m')%}
+							    			<td colspan="{{concurso.getMonthsLength()}}" style="background: #{{concurso.color}};"><a href="{{ concurso.link}}">{{ concurso.nombre }}</a></td>
+							    			{% set free = false %}
+							    				{% set busyLeft =  concurso.getMonthsLength() -1 %}
+				                		{% endif %}
+							    	{% endfor %}
 
-					    	
-					    	<td></td>
-					    	<td></td>
-					    	<td></td>
-					    	<td></td>
-					    	<td></td>
-					    	<td></td>
+							    	{% if free %}
+							    		<td></td>
+							    	{% endif %}
+							    {% endif %}
+			                {% endfor %}
+
+			                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
 					    </tr>
 
 			    	{% endfor %}
