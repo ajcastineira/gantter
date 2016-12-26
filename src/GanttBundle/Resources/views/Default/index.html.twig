@@ -1,12 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Bienvenido a Gantter {{latestDeadline|date("d/m/Y")}} {{monthsInterval}}</h1>
+    <h1>Bienvenido a Gantter {{latestDeadline|date("d/m/Y")}}</h1>
 
     {% for agencia in agencias %}
     	<strong>{{ agencia.nombre }} </strong></br>
 
-    	<table class="table table-bordered">
+    	<table class="table table-bordered" style="width: initial;">
 
 	    	{% for programa in agencia.getProgramas() %}
 	    		<thead>
@@ -14,7 +14,7 @@
 		                <th>{{ programa.nombre }}</th>
 		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		                {% for m in range(0, monthsInterval) %}
-		                	<th>{{ hoy|date_modify('+' ~ m ~ 'months') | date('M') }}</th>
+		                	<th>{{ hoy|date_modify('+' ~ m ~ 'months') | date('M-y') }}</th>
 		                {% endfor %}
 		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 		            </tr>
@@ -23,7 +23,7 @@
 
 		    		{% for fondolinea in programa.getFondosLineas() %}
 		    			<tr>
-		    				<td>{{ fondolinea.nombre }}</td>
+		    				<td style="width:200px;">{{ fondolinea.nombre }}</td>
 		    				{% set busyLeft = 0 %}
 
 					    	<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
@@ -37,14 +37,18 @@
 
 				                	{% for concurso in fondolinea.getConcursos() %}
 				                		{% if concurso.getFechaInicio()|date('Y-m') == columnDate | date('Y-m')%}
-							    			<td colspan="{{concurso.getMonthsLength()}}" style="background: #{{concurso.color}};"><a href="{{ concurso.link}}">{{ concurso.nombre }}</a></td>
+							    			{% set pl = (concurso.fechaInicio|date('d') * 3)|round %}
+							    			{% set pr = ((31 - concurso.fechaFinal|date('d'))*3)|round %}
+							    			<td style="width:101px; padding: 4px;" colspan="{{concurso.getMonthsLength()}}">
+							    				<a tabindex="0" class="btn btn-primary btn-sm" style="width: {{ 101 * concurso.getMonthsLength() - pl - pr - 8 }}px; background-color: #{{concurso.color}};position: relative;left: {{pl}}px;" role="button" data-toggle="popover" data-trigger="focus"  data-html="true" title="{{ concurso.nombre }} ({{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }})" data-content="{{concurso.descripcion}}</br><a href='{{concurso.link}}' target='_blank'>Web Oficial</a>">{{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }}</a>
+							    			</td>
 							    			{% set free = false %}
 							    				{% set busyLeft =  concurso.getMonthsLength() -1 %}
 				                		{% endif %}
 							    	{% endfor %}
 
 							    	{% if free %}
-							    		<td></td>
+							    		<td style="width:101px; padding: 4px;"></td>
 							    	{% endif %}
 							    {% endif %}
 			                {% endfor %}
@@ -60,4 +64,11 @@
     	</table>
 
     {% endfor %}
+
+    <script type="text/javascript">
+		window.onload = function() {
+		    $('[data-toggle="popover"]').popover() 
+		};
+    </script>
+
 {% endblock %}
