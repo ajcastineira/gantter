@@ -21,23 +21,23 @@ class __TwigTemplate_115db1bf855ef2368ebdfc77d93655495decf03aedc8cb71435fd27dba2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_dbc887ae5fc0deafcb4117ca1e51c3d56663916f9ac33f0ab084bfa9962decf9 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_dbc887ae5fc0deafcb4117ca1e51c3d56663916f9ac33f0ab084bfa9962decf9->enter($__internal_dbc887ae5fc0deafcb4117ca1e51c3d56663916f9ac33f0ab084bfa9962decf9_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "agencia/edit.html.twig"));
+        $__internal_060a1eab39cc94fc95f91e1cc470e7f33a4058c43887c383a8d6691fc83b0e65 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_060a1eab39cc94fc95f91e1cc470e7f33a4058c43887c383a8d6691fc83b0e65->enter($__internal_060a1eab39cc94fc95f91e1cc470e7f33a4058c43887c383a8d6691fc83b0e65_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "agencia/edit.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_dbc887ae5fc0deafcb4117ca1e51c3d56663916f9ac33f0ab084bfa9962decf9->leave($__internal_dbc887ae5fc0deafcb4117ca1e51c3d56663916f9ac33f0ab084bfa9962decf9_prof);
+        $__internal_060a1eab39cc94fc95f91e1cc470e7f33a4058c43887c383a8d6691fc83b0e65->leave($__internal_060a1eab39cc94fc95f91e1cc470e7f33a4058c43887c383a8d6691fc83b0e65_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_fd2ebac9f41feb0e066bbd8a01f281756cded4582378c8cf06106768ce58b78b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_fd2ebac9f41feb0e066bbd8a01f281756cded4582378c8cf06106768ce58b78b->enter($__internal_fd2ebac9f41feb0e066bbd8a01f281756cded4582378c8cf06106768ce58b78b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_36b8ab5ef8fcb83f6c57c3960fc0fccbaea599b67fae55b84694c32356ea1a6c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_36b8ab5ef8fcb83f6c57c3960fc0fccbaea599b67fae55b84694c32356ea1a6c->enter($__internal_36b8ab5ef8fcb83f6c57c3960fc0fccbaea599b67fae55b84694c32356ea1a6c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1>Agencia edit</h1>
+        echo "    <h1>Editar Agencia</h1>
 
     ";
         // line 6
@@ -47,34 +47,29 @@ class __TwigTemplate_115db1bf855ef2368ebdfc77d93655495decf03aedc8cb71435fd27dba2
         // line 7
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'widget');
         echo "
-        <input type=\"submit\" value=\"Edit\" />
+        <input type=\"submit\" class=\"btn btn-primary btn1\" role=\"button\" value=\"Guardar\" />
     ";
         // line 9
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["edit_form"]) ? $context["edit_form"] : $this->getContext($context, "edit_form")), 'form_end');
         echo "
 
-    <ul>
-        <li>
-            <a href=\"";
-        // line 13
+    <a href=\"";
+        // line 11
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("agencia_index");
-        echo "\">Back to the list</a>
-        </li>
-        <li>
-            ";
-        // line 16
+        echo "\" class=\"btn btn-info btn2\" role=\"button\" >Ver Lista</a>
+    ";
+        // line 12
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_start');
         echo "
-                <input type=\"submit\" value=\"Delete\">
-            ";
-        // line 18
+        <input type=\"submit\" value=\"Eliminar\" class=\"btn btn-danger btn3\" role=\"button\">
+    ";
+        // line 14
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["delete_form"]) ? $context["delete_form"] : $this->getContext($context, "delete_form")), 'form_end');
         echo "
-        </li>
-    </ul>
+
 ";
         
-        $__internal_fd2ebac9f41feb0e066bbd8a01f281756cded4582378c8cf06106768ce58b78b->leave($__internal_fd2ebac9f41feb0e066bbd8a01f281756cded4582378c8cf06106768ce58b78b_prof);
+        $__internal_36b8ab5ef8fcb83f6c57c3960fc0fccbaea599b67fae55b84694c32356ea1a6c->leave($__internal_36b8ab5ef8fcb83f6c57c3960fc0fccbaea599b67fae55b84694c32356ea1a6c_prof);
 
     }
 
@@ -90,7 +85,7 @@ class __TwigTemplate_115db1bf855ef2368ebdfc77d93655495decf03aedc8cb71435fd27dba2
 
     public function getDebugInfo()
     {
-        return array (  71 => 18,  66 => 16,  60 => 13,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  67 => 14,  62 => 12,  58 => 11,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -106,23 +101,18 @@ class __TwigTemplate_115db1bf855ef2368ebdfc77d93655495decf03aedc8cb71435fd27dba2
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Agencia edit</h1>
+    <h1>Editar Agencia</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type=\"submit\" value=\"Edit\" />
+        <input type=\"submit\" class=\"btn btn-primary btn1\" role=\"button\" value=\"Guardar\" />
     {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href=\"{{ path('agencia_index') }}\">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type=\"submit\" value=\"Delete\">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <a href=\"{{ path('agencia_index') }}\" class=\"btn btn-info btn2\" role=\"button\" >Ver Lista</a>
+    {{ form_start(delete_form) }}
+        <input type=\"submit\" value=\"Eliminar\" class=\"btn btn-danger btn3\" role=\"button\">
+    {{ form_end(delete_form) }}
+
 {% endblock %}
 ", "agencia/edit.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/agencia/edit.html.twig");
     }

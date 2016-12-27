@@ -19,8 +19,8 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_feab192a39a5cf7fa5c84c4b042be418806bcf87d842d181eb283c6cbf9ee1d4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_feab192a39a5cf7fa5c84c4b042be418806bcf87d842d181eb283c6cbf9ee1d4->enter($__internal_feab192a39a5cf7fa5c84c4b042be418806bcf87d842d181eb283c6cbf9ee1d4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_ac9e5c5fe70e128c59456d762db635c13d47125c374578a4f9f2ca203e0e6cdc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ac9e5c5fe70e128c59456d762db635c13d47125c374578a4f9f2ca203e0e6cdc->enter($__internal_ac9e5c5fe70e128c59456d762db635c13d47125c374578a4f9f2ca203e0e6cdc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -35,13 +35,7 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
         // line 6
         $this->displayBlock('stylesheets', $context, $blocks);
         // line 10
-        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
-        <link rel=\"icon\" type=\"image/x-icon\" href=\"";
-        // line 11
-        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("favicon.ico"), "html", null, true);
-        echo "\" />
+        echo "        <link rel=\"icon\" type=\"image/x-icon\" href=\"http://ipre.investigacion.ing.uc.cl/wp-content/uploads/2016/09/cropped-UC-favicon-1-1-32x32.png\" />
     </head>
     <header>
         <nav class=\"navbar navbar-default\">
@@ -54,83 +48,109 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
               </button>
-              <a class=\"navbar-brand\" href=\"#\">Brand</a>
+              <a class=\"navbar-brand\" href=\"#\">Gantter</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
               <ul class=\"nav navbar-nav\">
-                <li class=\"active\"><a href=\"#\">Link <span class=\"sr-only\">(current)</span></a></li>
-                <li><a href=\"#\">Link</a></li>
-                <li class=\"dropdown\">
-                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Dropdown <span class=\"caret\"></span></a>
-                  <ul class=\"dropdown-menu\">
-                    <li><a href=\"#\">Action</a></li>
-                    <li><a href=\"#\">Another action</a></li>
-                    <li><a href=\"#\">Something else here</a></li>
-                    <li role=\"separator\" class=\"divider\"></li>
-                    <li><a href=\"#\">Separated link</a></li>
-                    <li role=\"separator\" class=\"divider\"></li>
-                    <li><a href=\"#\">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class=\"navbar-form navbar-left\">
-                <div class=\"form-group\">
-                  <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
-                </div>
-                <button type=\"submit\" class=\"btn btn-default\">Submit</button>
-              </form>
-              <ul class=\"nav navbar-nav navbar-right\">
-                <li><a href=\"#\">Link</a></li>
-                <li class=\"dropdown\">
-                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Dropdown <span class=\"caret\"></span></a>
-                  <ul class=\"dropdown-menu\">
-                    <li><a href=\"#\">Action</a></li>
-                    <li><a href=\"#\">Another action</a></li>
-                    <li><a href=\"#\">Something else here</a></li>
-                    <li role=\"separator\" class=\"divider\"></li>
-                    <li><a href=\"#\">Separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
+                ";
+        // line 29
+        if ($this->env->getExtension('Symfony\Bridge\Twig\Extension\SecurityExtension')->isGranted("ROLE_ADMIN")) {
+            // line 30
+            echo "                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Agencias<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"";
+            // line 33
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("agencia_new");
+            echo "\">Nueva</a></li>
+                      <li><a href=\"";
+            // line 34
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("agencia_index");
+            echo "\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Programas<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"";
+            // line 40
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_new");
+            echo "\">Nuevo</a></li>
+                      <li><a href=\"";
+            // line 41
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_index");
+            echo "\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Fondos o Lineas<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"";
+            // line 47
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fondolinea_new");
+            echo "\">Nuevo</a></li>
+                      <li><a href=\"";
+            // line 48
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fondolinea_index");
+            echo "\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Concursos<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"";
+            // line 54
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("concurso_new");
+            echo "\">Nuevo</a></li>
+                      <li><a href=\"";
+            // line 55
+            echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("concurso_index");
+            echo "\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                ";
+        }
+        // line 59
+        echo "              </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>
     </header>
     <body>
         ";
-        // line 69
+        // line 65
         $this->displayBlock('body', $context, $blocks);
-        // line 70
+        // line 66
         echo "        ";
         $this->displayBlock('javascripts', $context, $blocks);
-        // line 75
+        // line 71
         echo "    </body>
 </html>
 ";
         
-        $__internal_feab192a39a5cf7fa5c84c4b042be418806bcf87d842d181eb283c6cbf9ee1d4->leave($__internal_feab192a39a5cf7fa5c84c4b042be418806bcf87d842d181eb283c6cbf9ee1d4_prof);
+        $__internal_ac9e5c5fe70e128c59456d762db635c13d47125c374578a4f9f2ca203e0e6cdc->leave($__internal_ac9e5c5fe70e128c59456d762db635c13d47125c374578a4f9f2ca203e0e6cdc_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_333a4aabef61e82ea5edbb86d40f8470a6f02d9a874f67bd2f7b9d0077b00a9a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_333a4aabef61e82ea5edbb86d40f8470a6f02d9a874f67bd2f7b9d0077b00a9a->enter($__internal_333a4aabef61e82ea5edbb86d40f8470a6f02d9a874f67bd2f7b9d0077b00a9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_77d9968883ada4b0e8dffc4ac9f8b5269807eb9aca6b54276ecee226f8cdb54f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_77d9968883ada4b0e8dffc4ac9f8b5269807eb9aca6b54276ecee226f8cdb54f->enter($__internal_77d9968883ada4b0e8dffc4ac9f8b5269807eb9aca6b54276ecee226f8cdb54f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Welcome!";
+        echo "Gantter!";
         
-        $__internal_333a4aabef61e82ea5edbb86d40f8470a6f02d9a874f67bd2f7b9d0077b00a9a->leave($__internal_333a4aabef61e82ea5edbb86d40f8470a6f02d9a874f67bd2f7b9d0077b00a9a_prof);
+        $__internal_77d9968883ada4b0e8dffc4ac9f8b5269807eb9aca6b54276ecee226f8cdb54f->leave($__internal_77d9968883ada4b0e8dffc4ac9f8b5269807eb9aca6b54276ecee226f8cdb54f_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_5a70aeca3c72c2f01aa32f0c61c6bd1c9281c6013898d752e00493e9911c74cc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5a70aeca3c72c2f01aa32f0c61c6bd1c9281c6013898d752e00493e9911c74cc->enter($__internal_5a70aeca3c72c2f01aa32f0c61c6bd1c9281c6013898d752e00493e9911c74cc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_6f68624dd00fc53f780bbdcedf86a19d61cc6e448c9a5714ac4e01b14cc8ce4b = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_6f68624dd00fc53f780bbdcedf86a19d61cc6e448c9a5714ac4e01b14cc8ce4b->enter($__internal_6f68624dd00fc53f780bbdcedf86a19d61cc6e448c9a5714ac4e01b14cc8ce4b_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 7
         echo "            <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\"/>
@@ -140,37 +160,37 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
         echo "\" rel=\"stylesheet\"/>
         ";
         
-        $__internal_5a70aeca3c72c2f01aa32f0c61c6bd1c9281c6013898d752e00493e9911c74cc->leave($__internal_5a70aeca3c72c2f01aa32f0c61c6bd1c9281c6013898d752e00493e9911c74cc_prof);
+        $__internal_6f68624dd00fc53f780bbdcedf86a19d61cc6e448c9a5714ac4e01b14cc8ce4b->leave($__internal_6f68624dd00fc53f780bbdcedf86a19d61cc6e448c9a5714ac4e01b14cc8ce4b_prof);
 
     }
 
-    // line 69
+    // line 65
     public function block_body($context, array $blocks = array())
     {
-        $__internal_76d41c1929912809fe72c08563f412fa389de3dd1ba20a68b34d7a8da5912e3f = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_76d41c1929912809fe72c08563f412fa389de3dd1ba20a68b34d7a8da5912e3f->enter($__internal_76d41c1929912809fe72c08563f412fa389de3dd1ba20a68b34d7a8da5912e3f_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_3b1af86ce124f81d19e2f972b7eca917be8cf292ceb0caedcace05520ae8ec5e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_3b1af86ce124f81d19e2f972b7eca917be8cf292ceb0caedcace05520ae8ec5e->enter($__internal_3b1af86ce124f81d19e2f972b7eca917be8cf292ceb0caedcace05520ae8ec5e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_76d41c1929912809fe72c08563f412fa389de3dd1ba20a68b34d7a8da5912e3f->leave($__internal_76d41c1929912809fe72c08563f412fa389de3dd1ba20a68b34d7a8da5912e3f_prof);
+        $__internal_3b1af86ce124f81d19e2f972b7eca917be8cf292ceb0caedcace05520ae8ec5e->leave($__internal_3b1af86ce124f81d19e2f972b7eca917be8cf292ceb0caedcace05520ae8ec5e_prof);
 
     }
 
-    // line 70
+    // line 66
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_b3c9f57a2eebce7dae3abfafffc48d83913a930b2edc5599a156f6fba3bf4cd6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b3c9f57a2eebce7dae3abfafffc48d83913a930b2edc5599a156f6fba3bf4cd6->enter($__internal_b3c9f57a2eebce7dae3abfafffc48d83913a930b2edc5599a156f6fba3bf4cd6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_530db862571b8360c962f05acdf1d8fca76494e60f4119a2b0ded7a31619ce02 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_530db862571b8360c962f05acdf1d8fca76494e60f4119a2b0ded7a31619ce02->enter($__internal_530db862571b8360c962f05acdf1d8fca76494e60f4119a2b0ded7a31619ce02_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
-        // line 71
+        // line 67
         echo "            <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>   
             <script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js\"></script>
             <script src=\"";
-        // line 73
+        // line 69
         echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\AssetExtension')->getAssetUrl("js/main.js"), "html", null, true);
         echo "\"></script>
         ";
         
-        $__internal_b3c9f57a2eebce7dae3abfafffc48d83913a930b2edc5599a156f6fba3bf4cd6->leave($__internal_b3c9f57a2eebce7dae3abfafffc48d83913a930b2edc5599a156f6fba3bf4cd6_prof);
+        $__internal_530db862571b8360c962f05acdf1d8fca76494e60f4119a2b0ded7a31619ce02->leave($__internal_530db862571b8360c962f05acdf1d8fca76494e60f4119a2b0ded7a31619ce02_prof);
 
     }
 
@@ -186,7 +206,7 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
 
     public function getDebugInfo()
     {
-        return array (  169 => 73,  165 => 71,  159 => 70,  148 => 69,  139 => 8,  136 => 7,  130 => 6,  118 => 5,  109 => 75,  106 => 70,  104 => 69,  43 => 11,  38 => 10,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  189 => 69,  185 => 67,  179 => 66,  168 => 65,  159 => 8,  156 => 7,  150 => 6,  138 => 5,  129 => 71,  126 => 66,  124 => 65,  116 => 59,  109 => 55,  105 => 54,  96 => 48,  92 => 47,  83 => 41,  79 => 40,  70 => 34,  66 => 33,  61 => 30,  59 => 29,  38 => 10,  36 => 6,  32 => 5,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -203,13 +223,12 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
 <html>
     <head>
         <meta charset=\"UTF-8\" />
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Gantter!{% endblock %}</title>
         {% block stylesheets %}
             <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\"/>
             <link href=\"{{ asset('css/main.css') }}\" rel=\"stylesheet\"/>
         {% endblock %}
-        <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\" />
-        <link rel=\"icon\" type=\"image/x-icon\" href=\"{{ asset('favicon.ico') }}\" />
+        <link rel=\"icon\" type=\"image/x-icon\" href=\"http://ipre.investigacion.ing.uc.cl/wp-content/uploads/2016/09/cropped-UC-favicon-1-1-32x32.png\" />
     </head>
     <header>
         <nav class=\"navbar navbar-default\">
@@ -222,45 +241,42 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
               </button>
-              <a class=\"navbar-brand\" href=\"#\">Brand</a>
+              <a class=\"navbar-brand\" href=\"#\">Gantter</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
             <div class=\"collapse navbar-collapse\" id=\"bs-example-navbar-collapse-1\">
               <ul class=\"nav navbar-nav\">
-                <li class=\"active\"><a href=\"#\">Link <span class=\"sr-only\">(current)</span></a></li>
-                <li><a href=\"#\">Link</a></li>
-                <li class=\"dropdown\">
-                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Dropdown <span class=\"caret\"></span></a>
-                  <ul class=\"dropdown-menu\">
-                    <li><a href=\"#\">Action</a></li>
-                    <li><a href=\"#\">Another action</a></li>
-                    <li><a href=\"#\">Something else here</a></li>
-                    <li role=\"separator\" class=\"divider\"></li>
-                    <li><a href=\"#\">Separated link</a></li>
-                    <li role=\"separator\" class=\"divider\"></li>
-                    <li><a href=\"#\">One more separated link</a></li>
-                  </ul>
-                </li>
-              </ul>
-              <form class=\"navbar-form navbar-left\">
-                <div class=\"form-group\">
-                  <input type=\"text\" class=\"form-control\" placeholder=\"Search\">
-                </div>
-                <button type=\"submit\" class=\"btn btn-default\">Submit</button>
-              </form>
-              <ul class=\"nav navbar-nav navbar-right\">
-                <li><a href=\"#\">Link</a></li>
-                <li class=\"dropdown\">
-                  <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Dropdown <span class=\"caret\"></span></a>
-                  <ul class=\"dropdown-menu\">
-                    <li><a href=\"#\">Action</a></li>
-                    <li><a href=\"#\">Another action</a></li>
-                    <li><a href=\"#\">Something else here</a></li>
-                    <li role=\"separator\" class=\"divider\"></li>
-                    <li><a href=\"#\">Separated link</a></li>
-                  </ul>
-                </li>
+                {% if is_granted('ROLE_ADMIN')%}
+                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Agencias<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"{{path('agencia_new')}}\">Nueva</a></li>
+                      <li><a href=\"{{path('agencia_index')}}\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Programas<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"{{path('programa_new')}}\">Nuevo</a></li>
+                      <li><a href=\"{{path('programa_index')}}\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Fondos o Lineas<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"{{path('fondolinea_new')}}\">Nuevo</a></li>
+                      <li><a href=\"{{path('fondolinea_index')}}\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                  <li class=\"dropdown\">
+                    <a href=\"#\" class=\"dropdown-toggle\" data-toggle=\"dropdown\" role=\"button\" aria-haspopup=\"true\" aria-expanded=\"false\">Concursos<span class=\"caret\"></span></a>
+                    <ul class=\"dropdown-menu\">
+                      <li><a href=\"{{path('concurso_new')}}\">Nuevo</a></li>
+                      <li><a href=\"{{path('concurso_index')}}\">Ver Listado</a></li>
+                    </ul>
+                  </li>
+                {% endif %}
               </ul>
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->

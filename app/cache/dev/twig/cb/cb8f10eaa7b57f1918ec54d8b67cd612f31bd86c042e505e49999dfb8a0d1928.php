@@ -21,25 +21,25 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7->enter($__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/index.html.twig"));
+        $__internal_18f6df6585b4a50988dfd0fcce5aaccd8bc96c0897cd97e3cf230ac956fae965 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_18f6df6585b4a50988dfd0fcce5aaccd8bc96c0897cd97e3cf230ac956fae965->enter($__internal_18f6df6585b4a50988dfd0fcce5aaccd8bc96c0897cd97e3cf230ac956fae965_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7->leave($__internal_db55e3b1cebcfea886a5310474308ccce52029dbafe60c9305a273229088d7d7_prof);
+        $__internal_18f6df6585b4a50988dfd0fcce5aaccd8bc96c0897cd97e3cf230ac956fae965->leave($__internal_18f6df6585b4a50988dfd0fcce5aaccd8bc96c0897cd97e3cf230ac956fae965_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb->enter($__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_12b20e3a6ce26fb56f548b6c843b9ad06377d6cc74f771bcdb316bfee4c7acdc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_12b20e3a6ce26fb56f548b6c843b9ad06377d6cc74f771bcdb316bfee4c7acdc->enter($__internal_12b20e3a6ce26fb56f548b6c843b9ad06377d6cc74f771bcdb316bfee4c7acdc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1>Concursos list</h1>
+        echo "    <h1>Concursos</h1>
 
-    <table>
+    <table class=\"table table-striped\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -93,20 +93,14 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
             echo twig_escape_filter($this->env, $this->getAttribute($context["concurso"], "color", array()), "html", null, true);
             echo "</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"";
-            // line 32
+                    <a href=\"";
+            // line 30
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("concurso_show", array("id" => $this->getAttribute($context["concurso"], "id", array()))), "html", null, true);
-            echo "\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"";
-            // line 35
+            echo "\" class=\"btn btn-info btn1\" role=\"button\">Ver</a>
+                    <a href=\"";
+            // line 31
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("concurso_edit", array("id" => $this->getAttribute($context["concurso"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
-                        </li>
-                    </ul>
+            echo "\" class=\"btn btn-primary btn1\" role=\"button\">Editar</a>
                 </td>
             </tr>
         ";
@@ -114,21 +108,17 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['concurso'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 41
+        // line 35
         echo "        </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"";
-        // line 46
+    <a href=\"";
+        // line 38
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("concurso_new");
-        echo "\">Create a new concurso</a>
-        </li>
-    </ul>
+        echo "\"class=\"btn btn-primary \" role=\"button\">Nuevo</a>
 ";
         
-        $__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb->leave($__internal_0fb3c8bd355f08d19f8eb13101d330c431e184699037f5965f36a194ac7aaebb_prof);
+        $__internal_12b20e3a6ce26fb56f548b6c843b9ad06377d6cc74f771bcdb316bfee4c7acdc->leave($__internal_12b20e3a6ce26fb56f548b6c843b9ad06377d6cc74f771bcdb316bfee4c7acdc_prof);
 
     }
 
@@ -144,7 +134,7 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
 
     public function getDebugInfo()
     {
-        return array (  125 => 46,  118 => 41,  106 => 35,  100 => 32,  93 => 28,  89 => 27,  85 => 26,  81 => 25,  75 => 24,  71 => 23,  65 => 22,  62 => 21,  58 => 20,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  117 => 38,  112 => 35,  102 => 31,  98 => 30,  93 => 28,  89 => 27,  85 => 26,  81 => 25,  75 => 24,  71 => 23,  65 => 22,  62 => 21,  58 => 20,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -160,9 +150,9 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Concursos list</h1>
+    <h1>Concursos</h1>
 
-    <table>
+    <table class=\"table table-striped\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -186,25 +176,15 @@ class __TwigTemplate_325303047e166ab59e85809c9bcb69b586a1d1c67a5e7425c639955e559
                 <td>{{ concurso.descripcion }}</td>
                 <td>{{ concurso.color }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"{{ path('concurso_show', { 'id': concurso.id }) }}\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"{{ path('concurso_edit', { 'id': concurso.id }) }}\">edit</a>
-                        </li>
-                    </ul>
+                    <a href=\"{{ path('concurso_show', { 'id': concurso.id }) }}\" class=\"btn btn-info btn1\" role=\"button\">Ver</a>
+                    <a href=\"{{ path('concurso_edit', { 'id': concurso.id }) }}\" class=\"btn btn-primary btn1\" role=\"button\">Editar</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"{{ path('concurso_new') }}\">Create a new concurso</a>
-        </li>
-    </ul>
+    <a href=\"{{ path('concurso_new') }}\"class=\"btn btn-primary \" role=\"button\">Nuevo</a>
 {% endblock %}
 ", "concurso/index.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/concurso/index.html.twig");
     }

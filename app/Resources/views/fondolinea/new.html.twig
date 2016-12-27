@@ -1,16 +1,12 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Fondolinea creation</h1>
+    <h1>Crear Fondo o Linea</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input type="submit" class="btn btn-primary btn1"  value="Postular" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('fondolinea_index') }}">Back to the list</a>
-        </li>
-    </ul>
+    <a href="{{ path('application_index') }}" class="btn btn-danger btn2" role="button" >Cancelar</a>
 {% endblock %}

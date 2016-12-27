@@ -21,23 +21,23 @@ class __TwigTemplate_273cef141cc346a3ebe612ec52c1c76e1eae4867a31f051548bb51943bf
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_19e399c54033cef6c5eea15372bfed14baf98fa10d7dbdecfdf9e09b251edddb = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_19e399c54033cef6c5eea15372bfed14baf98fa10d7dbdecfdf9e09b251edddb->enter($__internal_19e399c54033cef6c5eea15372bfed14baf98fa10d7dbdecfdf9e09b251edddb_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "agencia/new.html.twig"));
+        $__internal_82fc123c29320fb7557f047f1612b9c344f923455e09c800a097b4059ddeb1ac = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_82fc123c29320fb7557f047f1612b9c344f923455e09c800a097b4059ddeb1ac->enter($__internal_82fc123c29320fb7557f047f1612b9c344f923455e09c800a097b4059ddeb1ac_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "agencia/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_19e399c54033cef6c5eea15372bfed14baf98fa10d7dbdecfdf9e09b251edddb->leave($__internal_19e399c54033cef6c5eea15372bfed14baf98fa10d7dbdecfdf9e09b251edddb_prof);
+        $__internal_82fc123c29320fb7557f047f1612b9c344f923455e09c800a097b4059ddeb1ac->leave($__internal_82fc123c29320fb7557f047f1612b9c344f923455e09c800a097b4059ddeb1ac_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_6556193aff3366f705f308437844f3cbe35573d8d081eaccfffcabf930296412 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_6556193aff3366f705f308437844f3cbe35573d8d081eaccfffcabf930296412->enter($__internal_6556193aff3366f705f308437844f3cbe35573d8d081eaccfffcabf930296412_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_2dd26e25bf58237e9ea29b34d55c4889097916dccdd6a750848e30b58fcc9340 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2dd26e25bf58237e9ea29b34d55c4889097916dccdd6a750848e30b58fcc9340->enter($__internal_2dd26e25bf58237e9ea29b34d55c4889097916dccdd6a750848e30b58fcc9340_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1>Agencia creation</h1>
+        echo "    <h1>Crear Agencia</h1>
 
     ";
         // line 6
@@ -47,23 +47,19 @@ class __TwigTemplate_273cef141cc346a3ebe612ec52c1c76e1eae4867a31f051548bb51943bf
         // line 7
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
         echo "
-        <input type=\"submit\" value=\"Create\" />
+        <input type=\"submit\" class=\"btn btn-primary btn1\"  value=\"Postular\" />
     ";
         // line 9
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
-    <ul>
-        <li>
-            <a href=\"";
-        // line 13
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("agencia_index");
-        echo "\">Back to the list</a>
-        </li>
-    </ul>
+    <a href=\"";
+        // line 11
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("application_index");
+        echo "\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
 ";
         
-        $__internal_6556193aff3366f705f308437844f3cbe35573d8d081eaccfffcabf930296412->leave($__internal_6556193aff3366f705f308437844f3cbe35573d8d081eaccfffcabf930296412_prof);
+        $__internal_2dd26e25bf58237e9ea29b34d55c4889097916dccdd6a750848e30b58fcc9340->leave($__internal_2dd26e25bf58237e9ea29b34d55c4889097916dccdd6a750848e30b58fcc9340_prof);
 
     }
 
@@ -79,7 +75,7 @@ class __TwigTemplate_273cef141cc346a3ebe612ec52c1c76e1eae4867a31f051548bb51943bf
 
     public function getDebugInfo()
     {
-        return array (  60 => 13,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  58 => 11,  53 => 9,  48 => 7,  44 => 6,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -95,18 +91,14 @@ class __TwigTemplate_273cef141cc346a3ebe612ec52c1c76e1eae4867a31f051548bb51943bf
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Agencia creation</h1>
+    <h1>Crear Agencia</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type=\"submit\" value=\"Create\" />
+        <input type=\"submit\" class=\"btn btn-primary btn1\"  value=\"Postular\" />
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href=\"{{ path('agencia_index') }}\">Back to the list</a>
-        </li>
-    </ul>
+    <a href=\"{{ path('application_index') }}\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
 {% endblock %}
 ", "agencia/new.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/agencia/new.html.twig");
     }

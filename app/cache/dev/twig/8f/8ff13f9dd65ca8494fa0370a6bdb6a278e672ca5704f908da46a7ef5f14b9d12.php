@@ -21,20 +21,20 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d->enter($__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GanttBundle:Default:index.html.twig"));
+        $__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516->enter($__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GanttBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d->leave($__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d_prof);
+        $__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516->leave($__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4->enter($__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc->enter($__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Bienvenido a Gantter</h1>
@@ -170,7 +170,7 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["concurso"], "descripcion", array()), "html", null, true);
                                     echo "</br><a href='";
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["concurso"], "link", array()), "html", null, true);
-                                    echo "' target='_blank'>Web Oficial</a>\">";
+                                    echo "' target='_blank'>Ver más</a>\">";
                                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "getFechaInicio", array(), "method"), "d-m"), "html", null, true);
                                     echo "&nbsp; al &nbsp;";
                                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "getFechaFinal", array(), "method"), "d-m"), "html", null, true);
@@ -250,7 +250,7 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 
 ";
         
-        $__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4->leave($__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4_prof);
+        $__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc->leave($__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc_prof);
 
     }
 
@@ -330,7 +330,7 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 \t\t\t\t\t\t\t\t    \t\t\t{% set pl = (concurso.fechaInicio|date('d') * 3)|round %}
 \t\t\t\t\t\t\t\t    \t\t\t{% set pr = ((31 - concurso.fechaFinal|date('d'))*3)|round %}
 \t\t\t\t\t\t\t\t    \t\t\t<td padding: 4px;\" colspan=\"{{concurso.getMonthsLength()}}\">
-\t\t\t\t\t\t\t\t    \t\t\t\t<a tabindex=\"0\" class=\"btn btn-primary btn-sm\" style=\"width: {{ 115 * concurso.getMonthsLength() - pl - pr - 18 }}px; background-color: #{{concurso.color}};position: relative;left: {{pl}}px;\" role=\"button\" data-toggle=\"popover\" data-trigger=\"focus\"  data-html=\"true\" title=\"{{ concurso.nombre }} ({{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }})\" data-content=\"{{concurso.descripcion}}</br><a href='{{concurso.link}}' target='_blank'>Web Oficial</a>\">{{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }} </a>
+\t\t\t\t\t\t\t\t    \t\t\t\t<a tabindex=\"0\" class=\"btn btn-primary btn-sm\" style=\"width: {{ 115 * concurso.getMonthsLength() - pl - pr - 18 }}px; background-color: #{{concurso.color}};position: relative;left: {{pl}}px;\" role=\"button\" data-toggle=\"popover\" data-trigger=\"focus\"  data-html=\"true\" title=\"{{ concurso.nombre }} ({{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }})\" data-content=\"{{concurso.descripcion}}</br><a href='{{concurso.link}}' target='_blank'>Ver más</a>\">{{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }} </a>
 \t\t\t\t\t\t\t\t    \t\t\t</td>
 \t\t\t\t\t\t\t\t    \t\t\t{% set free = false %}
 \t\t\t\t\t\t\t\t    \t\t\t\t{% set busyLeft =  concurso.getMonthsLength() -1 %}

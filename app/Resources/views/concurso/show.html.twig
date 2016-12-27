@@ -3,7 +3,7 @@
 {% block body %}
     <h1>Concurso</h1>
 
-    <table>
+    <table class="table">
         <tbody>
             <tr>
                 <th>Id</th>
@@ -36,17 +36,10 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('concurso_index') }}">Back to the list</a>
-        </li>
-        <li>
-            <a href="{{ path('concurso_edit', { 'id': concurso.id }) }}">Edit</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <a href="{{ path('concurso_index') }}" class="btn btn-info btn1" role="button" >Ver listado</a>
+    <a href="{{ path('concurso_edit', { 'id': concurso.id }) }}" class="btn btn-primary btn2" role="button">Editar</a>
+
+    {{ form_start(delete_form) }}
+        <input type="submit" value="Eliminar" class="btn btn-danger btn2" role="button">
+    {{ form_end(delete_form) }}
 {% endblock %}

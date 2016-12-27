@@ -21,25 +21,25 @@ class __TwigTemplate_6596d772413b226bfe860db8b8fcefd6d6bb724f0a97faefad3f2c769f2
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_8b034706b664035224b4b6e9ff4a5839918ec93cf5e76aa5938527b2cf22af25 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_8b034706b664035224b4b6e9ff4a5839918ec93cf5e76aa5938527b2cf22af25->enter($__internal_8b034706b664035224b4b6e9ff4a5839918ec93cf5e76aa5938527b2cf22af25_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "fondolinea/index.html.twig"));
+        $__internal_29bc8f0e62d474d3d29aad7ccca869dd1238ae9ecb34c3536589ba7e9ddddc70 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_29bc8f0e62d474d3d29aad7ccca869dd1238ae9ecb34c3536589ba7e9ddddc70->enter($__internal_29bc8f0e62d474d3d29aad7ccca869dd1238ae9ecb34c3536589ba7e9ddddc70_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "fondolinea/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_8b034706b664035224b4b6e9ff4a5839918ec93cf5e76aa5938527b2cf22af25->leave($__internal_8b034706b664035224b4b6e9ff4a5839918ec93cf5e76aa5938527b2cf22af25_prof);
+        $__internal_29bc8f0e62d474d3d29aad7ccca869dd1238ae9ecb34c3536589ba7e9ddddc70->leave($__internal_29bc8f0e62d474d3d29aad7ccca869dd1238ae9ecb34c3536589ba7e9ddddc70_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b1cc3d2e1aa9cf1aa3c6cbb613d2d52ebbdba516ad9eae7abac083521c5188b8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b1cc3d2e1aa9cf1aa3c6cbb613d2d52ebbdba516ad9eae7abac083521c5188b8->enter($__internal_b1cc3d2e1aa9cf1aa3c6cbb613d2d52ebbdba516ad9eae7abac083521c5188b8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_cd2be51a9b6fc9b966d6d3ce7ae9c1f04318752e0227e0c4e692321862b6c892 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_cd2be51a9b6fc9b966d6d3ce7ae9c1f04318752e0227e0c4e692321862b6c892->enter($__internal_cd2be51a9b6fc9b966d6d3ce7ae9c1f04318752e0227e0c4e692321862b6c892_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1>Fondolineas list</h1>
+        echo "    <h1>Fondolineas</h1>
 
-    <table>
+    <table class=\"table table-striped\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -66,20 +66,14 @@ class __TwigTemplate_6596d772413b226bfe860db8b8fcefd6d6bb724f0a97faefad3f2c769f2
             echo twig_escape_filter($this->env, $this->getAttribute($context["fondoLinea"], "nombre", array()), "html", null, true);
             echo "</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"";
-            // line 22
+                    <a href=\"";
+            // line 20
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fondolinea_show", array("id" => $this->getAttribute($context["fondoLinea"], "id", array()))), "html", null, true);
-            echo "\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"";
-            // line 25
+            echo "\" class=\"btn btn-info btn1\" role=\"button\">Ver</a>
+                    <a href=\"";
+            // line 21
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fondolinea_edit", array("id" => $this->getAttribute($context["fondoLinea"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
-                        </li>
-                    </ul>
+            echo "\" class=\"btn btn-primary btn1\" role=\"button\">Editar</a>
                 </td>
             </tr>
         ";
@@ -87,21 +81,18 @@ class __TwigTemplate_6596d772413b226bfe860db8b8fcefd6d6bb724f0a97faefad3f2c769f2
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fondoLinea'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 25
         echo "        </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"";
-        // line 36
+    <a href=\"";
+        // line 28
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fondolinea_new");
-        echo "\">Create a new fondoLinea</a>
-        </li>
-    </ul>
+        echo "\"class=\"btn btn-primary \" role=\"button\">Nuevo</a>
+
 ";
         
-        $__internal_b1cc3d2e1aa9cf1aa3c6cbb613d2d52ebbdba516ad9eae7abac083521c5188b8->leave($__internal_b1cc3d2e1aa9cf1aa3c6cbb613d2d52ebbdba516ad9eae7abac083521c5188b8_prof);
+        $__internal_cd2be51a9b6fc9b966d6d3ce7ae9c1f04318752e0227e0c4e692321862b6c892->leave($__internal_cd2be51a9b6fc9b966d6d3ce7ae9c1f04318752e0227e0c4e692321862b6c892_prof);
 
     }
 
@@ -117,7 +108,7 @@ class __TwigTemplate_6596d772413b226bfe860db8b8fcefd6d6bb724f0a97faefad3f2c769f2
 
     public function getDebugInfo()
     {
-        return array (  98 => 36,  91 => 31,  79 => 25,  73 => 22,  66 => 18,  60 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  90 => 28,  85 => 25,  75 => 21,  71 => 20,  66 => 18,  60 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -133,9 +124,9 @@ class __TwigTemplate_6596d772413b226bfe860db8b8fcefd6d6bb724f0a97faefad3f2c769f2
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Fondolineas list</h1>
+    <h1>Fondolineas</h1>
 
-    <table>
+    <table class=\"table table-striped\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -149,25 +140,16 @@ class __TwigTemplate_6596d772413b226bfe860db8b8fcefd6d6bb724f0a97faefad3f2c769f2
                 <td><a href=\"{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}\">{{ fondoLinea.id }}</a></td>
                 <td>{{ fondoLinea.nombre }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"{{ path('fondolinea_edit', { 'id': fondoLinea.id }) }}\">edit</a>
-                        </li>
-                    </ul>
+                    <a href=\"{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}\" class=\"btn btn-info btn1\" role=\"button\">Ver</a>
+                    <a href=\"{{ path('fondolinea_edit', { 'id': fondoLinea.id }) }}\" class=\"btn btn-primary btn1\" role=\"button\">Editar</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"{{ path('fondolinea_new') }}\">Create a new fondoLinea</a>
-        </li>
-    </ul>
+    <a href=\"{{ path('fondolinea_new') }}\"class=\"btn btn-primary \" role=\"button\">Nuevo</a>
+
 {% endblock %}
 ", "fondolinea/index.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/fondolinea/index.html.twig");
     }

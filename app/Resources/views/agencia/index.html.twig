@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Agencias list</h1>
+    <h1>Agencias</h1>
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -17,23 +17,13 @@
                 <td><a href="{{ path('agencia_show', { 'id': agencia.id }) }}">{{ agencia.id }}</a></td>
                 <td>{{ agencia.nombre }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('agencia_show', { 'id': agencia.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('agencia_edit', { 'id': agencia.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <a href="{{ path('agencia_show', { 'id': agencia.id }) }}" class="btn btn-info btn1" role="button">Ver</a>
+                    <a href="{{ path('agencia_edit', { 'id': agencia.id }) }}" class="btn btn-primary btn1" role="button">Editar</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('agencia_new') }}">Create a new agencia</a>
-        </li>
-    </ul>
+    <a href="{{ path('agencia_new') }}"class="btn btn-primary " role="button">Nuevo</a>
 {% endblock %}

@@ -21,25 +21,25 @@ class __TwigTemplate_d2c058e5ebb0452e4e4fad0fca1b6387767c46a24f8219e29add814e1a7
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74->enter($__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "programa/index.html.twig"));
+        $__internal_35088a9dc9678a62b61766732dc9b2afc2b96380c1050cb403a3e40b7b9a4838 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_35088a9dc9678a62b61766732dc9b2afc2b96380c1050cb403a3e40b7b9a4838->enter($__internal_35088a9dc9678a62b61766732dc9b2afc2b96380c1050cb403a3e40b7b9a4838_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "programa/index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74->leave($__internal_3429d35ba2e6526c1b4c51382c24c088d328d34a12638ecfc358264128049c74_prof);
+        $__internal_35088a9dc9678a62b61766732dc9b2afc2b96380c1050cb403a3e40b7b9a4838->leave($__internal_35088a9dc9678a62b61766732dc9b2afc2b96380c1050cb403a3e40b7b9a4838_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a->enter($__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_40c67c43bd095e089ea46c8d229843b619d19ed77e1171d0c7590841d593ef7e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_40c67c43bd095e089ea46c8d229843b619d19ed77e1171d0c7590841d593ef7e->enter($__internal_40c67c43bd095e089ea46c8d229843b619d19ed77e1171d0c7590841d593ef7e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1>Programas list</h1>
+        echo "    <h1>Programas</h1>
 
-    <table>
+    <table class=\"table table-striped\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -66,20 +66,14 @@ class __TwigTemplate_d2c058e5ebb0452e4e4fad0fca1b6387767c46a24f8219e29add814e1a7
             echo twig_escape_filter($this->env, $this->getAttribute($context["programa"], "nombre", array()), "html", null, true);
             echo "</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"";
-            // line 22
+                    <a href=\"";
+            // line 20
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_show", array("id" => $this->getAttribute($context["programa"], "id", array()))), "html", null, true);
-            echo "\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"";
-            // line 25
+            echo "\" class=\"btn btn-info btn1\" role=\"button\">Ver</a>
+                    <a href=\"";
+            // line 21
             echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_edit", array("id" => $this->getAttribute($context["programa"], "id", array()))), "html", null, true);
-            echo "\">edit</a>
-                        </li>
-                    </ul>
+            echo "\" class=\"btn btn-primary btn1\" role=\"button\">Editar</a>
                 </td>
             </tr>
         ";
@@ -87,21 +81,18 @@ class __TwigTemplate_d2c058e5ebb0452e4e4fad0fca1b6387767c46a24f8219e29add814e1a7
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['programa'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 31
+        // line 25
         echo "        </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"";
-        // line 36
+    <a href=\"";
+        // line 28
         echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("programa_new");
-        echo "\">Create a new programa</a>
-        </li>
-    </ul>
+        echo "\"class=\"btn btn-primary \" role=\"button\">Nuevo</a>
+
 ";
         
-        $__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a->leave($__internal_70aa4fd92ccfc9edfcaa41d33d88c7c2abc5dd06ad7d35c1ff167f0b8de7ae9a_prof);
+        $__internal_40c67c43bd095e089ea46c8d229843b619d19ed77e1171d0c7590841d593ef7e->leave($__internal_40c67c43bd095e089ea46c8d229843b619d19ed77e1171d0c7590841d593ef7e_prof);
 
     }
 
@@ -117,7 +108,7 @@ class __TwigTemplate_d2c058e5ebb0452e4e4fad0fca1b6387767c46a24f8219e29add814e1a7
 
     public function getDebugInfo()
     {
-        return array (  98 => 36,  91 => 31,  79 => 25,  73 => 22,  66 => 18,  60 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  90 => 28,  85 => 25,  75 => 21,  71 => 20,  66 => 18,  60 => 17,  57 => 16,  53 => 15,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -133,9 +124,9 @@ class __TwigTemplate_d2c058e5ebb0452e4e4fad0fca1b6387767c46a24f8219e29add814e1a7
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Programas list</h1>
+    <h1>Programas</h1>
 
-    <table>
+    <table class=\"table table-striped\">
         <thead>
             <tr>
                 <th>Id</th>
@@ -149,25 +140,16 @@ class __TwigTemplate_d2c058e5ebb0452e4e4fad0fca1b6387767c46a24f8219e29add814e1a7
                 <td><a href=\"{{ path('programa_show', { 'id': programa.id }) }}\">{{ programa.id }}</a></td>
                 <td>{{ programa.nombre }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href=\"{{ path('programa_show', { 'id': programa.id }) }}\">show</a>
-                        </li>
-                        <li>
-                            <a href=\"{{ path('programa_edit', { 'id': programa.id }) }}\">edit</a>
-                        </li>
-                    </ul>
+                    <a href=\"{{ path('programa_show', { 'id': programa.id }) }}\" class=\"btn btn-info btn1\" role=\"button\">Ver</a>
+                    <a href=\"{{ path('programa_edit', { 'id': programa.id }) }}\" class=\"btn btn-primary btn1\" role=\"button\">Editar</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href=\"{{ path('programa_new') }}\">Create a new programa</a>
-        </li>
-    </ul>
+    <a href=\"{{ path('programa_new') }}\"class=\"btn btn-primary \" role=\"button\">Nuevo</a>
+
 {% endblock %}
 ", "programa/index.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/programa/index.html.twig");
     }

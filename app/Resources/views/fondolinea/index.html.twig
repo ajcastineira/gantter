@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Fondolineas list</h1>
+    <h1>Fondolineas</h1>
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -17,23 +17,14 @@
                 <td><a href="{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}">{{ fondoLinea.id }}</a></td>
                 <td>{{ fondoLinea.nombre }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('fondolinea_edit', { 'id': fondoLinea.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <a href="{{ path('fondolinea_show', { 'id': fondoLinea.id }) }}" class="btn btn-info btn1" role="button">Ver</a>
+                    <a href="{{ path('fondolinea_edit', { 'id': fondoLinea.id }) }}" class="btn btn-primary btn1" role="button">Editar</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('fondolinea_new') }}">Create a new fondoLinea</a>
-        </li>
-    </ul>
+    <a href="{{ path('fondolinea_new') }}"class="btn btn-primary " role="button">Nuevo</a>
+
 {% endblock %}

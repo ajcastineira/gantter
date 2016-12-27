@@ -1,22 +1,17 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <script src="../js/jscolor.js"></script>
-    <h1>Concurso edit</h1>
+    <script src="../../js/jscolor.js"></script>
+    <h1>Editar Concurso</h1>
 
     {{ form_start(edit_form) }}
         {{ form_widget(edit_form) }}
-        <input type="submit" value="Edit" />
+        <input type="submit" class="btn btn-primary btn1" role="button" value="Guardar" />
     {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('concurso_index') }}">Back to the list</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Delete">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <a href="{{ path('concurso_index') }}" class="btn btn-info btn2" role="button" >Ver Lista</a>
+    {{ form_start(delete_form) }}
+        <input type="submit" value="Eliminar" class="btn btn-danger btn3" role="button">
+    {{ form_end(delete_form) }}
+
 {% endblock %}

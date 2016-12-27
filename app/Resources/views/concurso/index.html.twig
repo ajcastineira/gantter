@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Concursos list</h1>
+    <h1>Concursos</h1>
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Id</th>
@@ -27,23 +27,13 @@
                 <td>{{ concurso.descripcion }}</td>
                 <td>{{ concurso.color }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('concurso_show', { 'id': concurso.id }) }}">show</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('concurso_edit', { 'id': concurso.id }) }}">edit</a>
-                        </li>
-                    </ul>
+                    <a href="{{ path('concurso_show', { 'id': concurso.id }) }}" class="btn btn-info btn1" role="button">Ver</a>
+                    <a href="{{ path('concurso_edit', { 'id': concurso.id }) }}" class="btn btn-primary btn1" role="button">Editar</a>
                 </td>
             </tr>
         {% endfor %}
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('concurso_new') }}">Create a new concurso</a>
-        </li>
-    </ul>
+    <a href="{{ path('concurso_new') }}"class="btn btn-primary " role="button">Nuevo</a>
 {% endblock %}
