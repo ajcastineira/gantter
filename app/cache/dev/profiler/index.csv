@@ -792,3 +792,7 @@ bb275f,127.0.0.1,GET,http://localhost:8000/,1482854924,,200
 15a590,127.0.0.1,GET,http://localhost:8000/login,1482854933,,200
 3e5563,127.0.0.1,POST,http://localhost:8000/login_check,1482854937,,302
 488043,127.0.0.1,GET,http://localhost:8000/,1482854937,,200
+65f4ae,127.0.0.1,GET,http://localhost:8000/,1482855932,,302
+ab558f,127.0.0.1,GET,http://localhost:8000/login,1482855932,,200
+e88447,127.0.0.1,POST,http://localhost:8000/login_check,1482855937,,302
+989425,127.0.0.1,GET,http://localhost:8000/,1482855937,,200

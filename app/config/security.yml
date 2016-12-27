@@ -27,7 +27,7 @@ security:
     access_control:
         - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
         - { path: ^/login_check$, roles: [ROLE_ADMIN, ROLE_OTHER] }
-        - { path: ^/$, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 122.0.0.1 }
+        - { path: ^/$, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 146.155.0.0/16 }
         - { path: ^/$, roles: ROLE_OTHER }
 
     providers:

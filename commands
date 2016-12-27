@@ -5,6 +5,11 @@ php app/console generate:doctrine:crud
 php app/console doctrine:schema:validate
 php app/console doctrine:schema:update --force
 
+146.155.0.0/16
+http://www.tcpiputils.com/browse/ip-address/146.155.0.0-146.155.255.255
+
+
+
 mysqldump -u root -p ipre > ipre_hash.sql
 
 UPDATE wpi2030_blogs SET domain = replace(domain, 'http://blogsing2030.ipre.ing.uc.cl/', 'http://blogsing2030.investigacion.ing.uc.cl');
