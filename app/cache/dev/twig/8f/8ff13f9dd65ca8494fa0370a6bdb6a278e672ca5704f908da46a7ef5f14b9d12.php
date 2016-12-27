@@ -21,133 +21,141 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_c56ae532c870fcbfab701d74aa7159f38a69dc320700cd82f66a409f222be3dd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_c56ae532c870fcbfab701d74aa7159f38a69dc320700cd82f66a409f222be3dd->enter($__internal_c56ae532c870fcbfab701d74aa7159f38a69dc320700cd82f66a409f222be3dd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GanttBundle:Default:index.html.twig"));
+        $__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d->enter($__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GanttBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_c56ae532c870fcbfab701d74aa7159f38a69dc320700cd82f66a409f222be3dd->leave($__internal_c56ae532c870fcbfab701d74aa7159f38a69dc320700cd82f66a409f222be3dd_prof);
+        $__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d->leave($__internal_57230805fa3185a7213ba7717aad465c7e407b341ff03af41986d94309d14b2d_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_72c93cfdb02986a1654e3fa2fc36cf2cdf10e9a72e8e3fbb93fa3011cc4830e2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_72c93cfdb02986a1654e3fa2fc36cf2cdf10e9a72e8e3fbb93fa3011cc4830e2->enter($__internal_72c93cfdb02986a1654e3fa2fc36cf2cdf10e9a72e8e3fbb93fa3011cc4830e2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4->enter($__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1>Bienvenido a Gantter ";
-        echo twig_escape_filter($this->env, twig_date_format_filter($this->env, (isset($context["latestDeadline"]) ? $context["latestDeadline"] : $this->getContext($context, "latestDeadline")), "d/m/Y"), "html", null, true);
-        echo "</h1>
+        echo "    <h1>Bienvenido a Gantter</h1>
 
-    ";
-        // line 6
+    <div style=\"max-width:1024px; overflow-x:scroll;\">
+\t    ";
+        // line 7
         $context['_parent'] = $context;
         $context['_seq'] = twig_ensure_traversable((isset($context["agencias"]) ? $context["agencias"] : $this->getContext($context, "agencias")));
         foreach ($context['_seq'] as $context["_key"] => $context["agencia"]) {
-            // line 7
-            echo "    \t<strong>";
+            // line 8
+            echo "\t    \t<strong>";
             echo twig_escape_filter($this->env, $this->getAttribute($context["agencia"], "nombre", array()), "html", null, true);
             echo " </strong></br>
 
-    \t<table class=\"table table-bordered\" style=\"width: initial;\">
+\t    \t<table class=\"table table-bordered\" style=\"width: initial;\">
 
-\t    \t";
-            // line 11
+\t\t    \t";
+            // line 12
             $context['_parent'] = $context;
             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["agencia"], "getProgramas", array(), "method"));
             foreach ($context['_seq'] as $context["_key"] => $context["programa"]) {
-                // line 12
-                echo "\t    \t\t<thead>
-\t\t            <tr>
-\t\t                <th>";
-                // line 14
+                // line 13
+                echo "\t\t    \t\t<thead>
+\t\t\t            <tr>
+\t\t\t                <th>
+\t\t\t                \t<div style=\"width:200px;\">
+\t\t\t                \t\t";
+                // line 17
                 echo twig_escape_filter($this->env, $this->getAttribute($context["programa"], "nombre", array()), "html", null, true);
-                echo "</th>
-\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-\t\t                ";
-                // line 16
+                echo "
+\t\t\t\t    \t\t\t</div>
+\t\t\t\t    \t\t</th>
+\t\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+\t\t\t                ";
+                // line 21
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["monthsInterval"]) ? $context["monthsInterval"] : $this->getContext($context, "monthsInterval"))));
                 foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
-                    // line 17
-                    echo "\t\t                \t<th>";
+                    // line 22
+                    echo "\t\t\t                \t<th>
+\t\t\t                \t\t<div style=\"width:98px;\">
+\t\t\t                \t\t\t";
+                    // line 24
                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, twig_date_modify_filter($this->env, (isset($context["hoy"]) ? $context["hoy"] : $this->getContext($context, "hoy")), (("+" . $context["m"]) . "months")), "M-y"), "html", null, true);
-                    echo "</th>
-\t\t                ";
+                    echo "
+\t\t\t                \t\t</div>
+\t\t\t                \t</th>
+\t\t\t                ";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 19
-                echo "\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-\t\t            </tr>
-\t\t        </thead>
-\t\t        <tbody>
+                // line 28
+                echo "\t\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+\t\t\t            </tr>
+\t\t\t        </thead>
+\t\t\t        <tbody>
 
-\t\t    \t\t";
-                // line 24
+\t\t\t    \t\t";
+                // line 33
                 $context['_parent'] = $context;
                 $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["programa"], "getFondosLineas", array(), "method"));
                 foreach ($context['_seq'] as $context["_key"] => $context["fondolinea"]) {
-                    // line 25
-                    echo "\t\t    \t\t\t<tr>
-\t\t    \t\t\t\t<td style=\"width:200px;\">";
-                    // line 26
+                    // line 34
+                    echo "\t\t\t    \t\t\t<tr>
+\t\t\t    \t\t\t\t<td style=\"width:200px;\">";
+                    // line 35
                     echo twig_escape_filter($this->env, $this->getAttribute($context["fondolinea"], "nombre", array()), "html", null, true);
                     echo "</td>
-\t\t    \t\t\t\t";
-                    // line 27
+\t\t\t    \t\t\t\t";
+                    // line 36
                     $context["busyLeft"] = 0;
-                    // line 28
+                    // line 37
                     echo "
-\t\t\t\t\t    \t<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-\t\t\t                ";
-                    // line 30
+\t\t\t\t\t\t    \t<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+\t\t\t\t                ";
+                    // line 39
                     $context['_parent'] = $context;
                     $context['_seq'] = twig_ensure_traversable(range(0, (isset($context["monthsInterval"]) ? $context["monthsInterval"] : $this->getContext($context, "monthsInterval"))));
                     foreach ($context['_seq'] as $context["_key"] => $context["m"]) {
-                        // line 31
-                        echo "\t\t\t                \t";
+                        // line 40
+                        echo "\t\t\t\t                \t";
                         if (((isset($context["busyLeft"]) ? $context["busyLeft"] : $this->getContext($context, "busyLeft")) > 0)) {
-                            // line 32
-                            echo "\t\t\t                \t\t";
+                            // line 41
+                            echo "\t\t\t\t                \t\t";
                             $context["busyLeft"] = ((isset($context["busyLeft"]) ? $context["busyLeft"] : $this->getContext($context, "busyLeft")) - 1);
-                            // line 33
-                            echo "\t\t\t                \t";
-                        } else {
-                            // line 34
-                            echo "
-\t\t\t\t                \t";
-                            // line 35
-                            $context["columnDate"] = twig_date_modify_filter($this->env, (isset($context["hoy"]) ? $context["hoy"] : $this->getContext($context, "hoy")), (("+" . $context["m"]) . "months"));
-                            // line 36
+                            // line 42
                             echo "\t\t\t\t                \t";
-                            $context["free"] = true;
-                            // line 37
+                        } else {
+                            // line 43
                             echo "
-\t\t\t\t                \t";
-                            // line 38
+\t\t\t\t\t                \t";
+                            // line 44
+                            $context["columnDate"] = twig_date_modify_filter($this->env, (isset($context["hoy"]) ? $context["hoy"] : $this->getContext($context, "hoy")), (("+" . $context["m"]) . "months"));
+                            // line 45
+                            echo "\t\t\t\t\t                \t";
+                            $context["free"] = true;
+                            // line 46
+                            echo "
+\t\t\t\t\t                \t";
+                            // line 47
                             $context['_parent'] = $context;
                             $context['_seq'] = twig_ensure_traversable($this->getAttribute($context["fondolinea"], "getConcursos", array(), "method"));
                             foreach ($context['_seq'] as $context["_key"] => $context["concurso"]) {
-                                // line 39
-                                echo "\t\t\t\t                \t\t";
+                                // line 48
+                                echo "\t\t\t\t\t                \t\t";
                                 if ((twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "getFechaInicio", array(), "method"), "Y-m") == twig_date_format_filter($this->env, (isset($context["columnDate"]) ? $context["columnDate"] : $this->getContext($context, "columnDate")), "Y-m"))) {
-                                    // line 40
-                                    echo "\t\t\t\t\t\t\t    \t\t\t";
+                                    // line 49
+                                    echo "\t\t\t\t\t\t\t\t    \t\t\t";
                                     $context["pl"] = twig_round((twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "fechaInicio", array()), "d") * 3));
-                                    // line 41
-                                    echo "\t\t\t\t\t\t\t    \t\t\t";
+                                    // line 50
+                                    echo "\t\t\t\t\t\t\t\t    \t\t\t";
                                     $context["pr"] = twig_round(((31 - twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "fechaFinal", array()), "d")) * 3));
-                                    // line 42
-                                    echo "\t\t\t\t\t\t\t    \t\t\t<td style=\"width:101px; padding: 4px;\" colspan=\"";
+                                    // line 51
+                                    echo "\t\t\t\t\t\t\t\t    \t\t\t<td padding: 4px;\" colspan=\"";
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["concurso"], "getMonthsLength", array(), "method"), "html", null, true);
                                     echo "\">
-\t\t\t\t\t\t\t    \t\t\t\t<a tabindex=\"0\" class=\"btn btn-primary btn-sm\" style=\"width: ";
-                                    // line 43
-                                    echo twig_escape_filter($this->env, ((((101 * $this->getAttribute($context["concurso"], "getMonthsLength", array(), "method")) - (isset($context["pl"]) ? $context["pl"] : $this->getContext($context, "pl"))) - (isset($context["pr"]) ? $context["pr"] : $this->getContext($context, "pr"))) - 8), "html", null, true);
+\t\t\t\t\t\t\t\t    \t\t\t\t<a tabindex=\"0\" class=\"btn btn-primary btn-sm\" style=\"width: ";
+                                    // line 52
+                                    echo twig_escape_filter($this->env, ((((115 * $this->getAttribute($context["concurso"], "getMonthsLength", array(), "method")) - (isset($context["pl"]) ? $context["pl"] : $this->getContext($context, "pl"))) - (isset($context["pr"]) ? $context["pr"] : $this->getContext($context, "pr"))) - 18), "html", null, true);
                                     echo "px; background-color: #";
                                     echo twig_escape_filter($this->env, $this->getAttribute($context["concurso"], "color", array()), "html", null, true);
                                     echo ";position: relative;left: ";
@@ -166,70 +174,74 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
                                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "getFechaInicio", array(), "method"), "d-m"), "html", null, true);
                                     echo "&nbsp; al &nbsp;";
                                     echo twig_escape_filter($this->env, twig_date_format_filter($this->env, $this->getAttribute($context["concurso"], "getFechaFinal", array(), "method"), "d-m"), "html", null, true);
-                                    echo "</a>
-\t\t\t\t\t\t\t    \t\t\t</td>
-\t\t\t\t\t\t\t    \t\t\t";
-                                    // line 45
+                                    echo " </a>
+\t\t\t\t\t\t\t\t    \t\t\t</td>
+\t\t\t\t\t\t\t\t    \t\t\t";
+                                    // line 54
                                     $context["free"] = false;
-                                    // line 46
-                                    echo "\t\t\t\t\t\t\t    \t\t\t\t";
+                                    // line 55
+                                    echo "\t\t\t\t\t\t\t\t    \t\t\t\t";
                                     $context["busyLeft"] = ($this->getAttribute($context["concurso"], "getMonthsLength", array(), "method") - 1);
-                                    // line 47
-                                    echo "\t\t\t\t                \t\t";
+                                    // line 56
+                                    echo "\t\t\t\t\t                \t\t";
                                 }
-                                // line 48
-                                echo "\t\t\t\t\t\t\t    \t";
+                                // line 57
+                                echo "\t\t\t\t\t\t\t\t    \t";
                             }
                             $_parent = $context['_parent'];
                             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['concurso'], $context['_parent'], $context['loop']);
                             $context = array_intersect_key($context, $_parent) + $_parent;
-                            // line 49
+                            // line 58
                             echo "
-\t\t\t\t\t\t\t    \t";
-                            // line 50
+\t\t\t\t\t\t\t\t    \t";
+                            // line 59
                             if ((isset($context["free"]) ? $context["free"] : $this->getContext($context, "free"))) {
-                                // line 51
-                                echo "\t\t\t\t\t\t\t    \t\t<td style=\"width:101px; padding: 4px;\"></td>
-\t\t\t\t\t\t\t    \t";
+                                // line 60
+                                echo "\t\t\t\t\t\t\t\t    \t\t<td style=\"width:101px; padding: 4px;\">
+\t\t\t\t\t\t\t\t    \t\t\t<div style=\"width:98px;\">
+\t\t\t\t\t\t\t\t    \t\t\t</div>
+\t\t\t\t\t\t\t\t    \t\t</td>
+\t\t\t\t\t\t\t\t    \t";
                             }
-                            // line 53
-                            echo "\t\t\t\t\t\t\t    ";
+                            // line 65
+                            echo "\t\t\t\t\t\t\t\t    ";
                         }
-                        // line 54
-                        echo "\t\t\t                ";
+                        // line 66
+                        echo "\t\t\t\t                ";
                     }
                     $_parent = $context['_parent'];
                     unset($context['_seq'], $context['_iterated'], $context['_key'], $context['m'], $context['_parent'], $context['loop']);
                     $context = array_intersect_key($context, $_parent) + $_parent;
-                    // line 55
+                    // line 67
                     echo "
-\t\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+\t\t\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
 
-\t\t\t\t\t    </tr>
+\t\t\t\t\t\t    </tr>
 
-\t\t\t    \t";
+\t\t\t\t    \t";
                 }
                 $_parent = $context['_parent'];
                 unset($context['_seq'], $context['_iterated'], $context['_key'], $context['fondolinea'], $context['_parent'], $context['loop']);
                 $context = array_intersect_key($context, $_parent) + $_parent;
-                // line 61
-                echo "\t\t    \t</tbody>
+                // line 73
+                echo "\t\t\t    \t</tbody>
 
-\t    \t";
+\t\t    \t";
             }
             $_parent = $context['_parent'];
             unset($context['_seq'], $context['_iterated'], $context['_key'], $context['programa'], $context['_parent'], $context['loop']);
             $context = array_intersect_key($context, $_parent) + $_parent;
-            // line 64
-            echo "    \t</table>
+            // line 76
+            echo "\t    \t</table>
 
-    ";
+\t    ";
         }
         $_parent = $context['_parent'];
         unset($context['_seq'], $context['_iterated'], $context['_key'], $context['agencia'], $context['_parent'], $context['loop']);
         $context = array_intersect_key($context, $_parent) + $_parent;
-        // line 67
-        echo "
+        // line 79
+        echo "\t</div>
+
     <script type=\"text/javascript\">
 \t\twindow.onload = function() {
 \t\t    \$('[data-toggle=\"popover\"]').popover() 
@@ -238,7 +250,7 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 
 ";
         
-        $__internal_72c93cfdb02986a1654e3fa2fc36cf2cdf10e9a72e8e3fbb93fa3011cc4830e2->leave($__internal_72c93cfdb02986a1654e3fa2fc36cf2cdf10e9a72e8e3fbb93fa3011cc4830e2_prof);
+        $__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4->leave($__internal_29c57bfbc0e3ff26834a7defaff87760f123f3f69ecef5b290a84de4a4485be4_prof);
 
     }
 
@@ -254,7 +266,7 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 
     public function getDebugInfo()
     {
-        return array (  232 => 67,  224 => 64,  216 => 61,  205 => 55,  199 => 54,  196 => 53,  192 => 51,  190 => 50,  187 => 49,  181 => 48,  178 => 47,  175 => 46,  173 => 45,  150 => 43,  145 => 42,  142 => 41,  139 => 40,  136 => 39,  132 => 38,  129 => 37,  126 => 36,  124 => 35,  121 => 34,  118 => 33,  115 => 32,  112 => 31,  108 => 30,  104 => 28,  102 => 27,  98 => 26,  95 => 25,  91 => 24,  84 => 19,  75 => 17,  71 => 16,  66 => 14,  62 => 12,  58 => 11,  50 => 7,  46 => 6,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  243 => 79,  235 => 76,  227 => 73,  216 => 67,  210 => 66,  207 => 65,  200 => 60,  198 => 59,  195 => 58,  189 => 57,  186 => 56,  183 => 55,  181 => 54,  158 => 52,  153 => 51,  150 => 50,  147 => 49,  144 => 48,  140 => 47,  137 => 46,  134 => 45,  132 => 44,  129 => 43,  126 => 42,  123 => 41,  120 => 40,  116 => 39,  112 => 37,  110 => 36,  106 => 35,  103 => 34,  99 => 33,  92 => 28,  82 => 24,  78 => 22,  74 => 21,  67 => 17,  61 => 13,  57 => 12,  49 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -270,69 +282,82 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Bienvenido a Gantter {{latestDeadline|date(\"d/m/Y\")}}</h1>
+    <h1>Bienvenido a Gantter</h1>
 
-    {% for agencia in agencias %}
-    \t<strong>{{ agencia.nombre }} </strong></br>
+    <div style=\"max-width:1024px; overflow-x:scroll;\">
+\t    {% for agencia in agencias %}
+\t    \t<strong>{{ agencia.nombre }} </strong></br>
 
-    \t<table class=\"table table-bordered\" style=\"width: initial;\">
+\t    \t<table class=\"table table-bordered\" style=\"width: initial;\">
 
-\t    \t{% for programa in agencia.getProgramas() %}
-\t    \t\t<thead>
-\t\t            <tr>
-\t\t                <th>{{ programa.nombre }}</th>
-\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-\t\t                {% for m in range(0, monthsInterval) %}
-\t\t                \t<th>{{ hoy|date_modify('+' ~ m ~ 'months') | date('M-y') }}</th>
-\t\t                {% endfor %}
-\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-\t\t            </tr>
-\t\t        </thead>
-\t\t        <tbody>
-
-\t\t    \t\t{% for fondolinea in programa.getFondosLineas() %}
-\t\t    \t\t\t<tr>
-\t\t    \t\t\t\t<td style=\"width:200px;\">{{ fondolinea.nombre }}</td>
-\t\t    \t\t\t\t{% set busyLeft = 0 %}
-
-\t\t\t\t\t    \t<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-\t\t\t                {% for m in range(0, monthsInterval) %}
-\t\t\t                \t{% if busyLeft > 0 %}
-\t\t\t                \t\t{% set busyLeft = busyLeft - 1 %}
-\t\t\t                \t{% else %}
-
-\t\t\t\t                \t{% set columnDate =  hoy|date_modify('+' ~ m ~ 'months') %}
-\t\t\t\t                \t{% set free = true %}
-
-\t\t\t\t                \t{% for concurso in fondolinea.getConcursos() %}
-\t\t\t\t                \t\t{% if concurso.getFechaInicio()|date('Y-m') == columnDate | date('Y-m')%}
-\t\t\t\t\t\t\t    \t\t\t{% set pl = (concurso.fechaInicio|date('d') * 3)|round %}
-\t\t\t\t\t\t\t    \t\t\t{% set pr = ((31 - concurso.fechaFinal|date('d'))*3)|round %}
-\t\t\t\t\t\t\t    \t\t\t<td style=\"width:101px; padding: 4px;\" colspan=\"{{concurso.getMonthsLength()}}\">
-\t\t\t\t\t\t\t    \t\t\t\t<a tabindex=\"0\" class=\"btn btn-primary btn-sm\" style=\"width: {{ 101 * concurso.getMonthsLength() - pl - pr - 8 }}px; background-color: #{{concurso.color}};position: relative;left: {{pl}}px;\" role=\"button\" data-toggle=\"popover\" data-trigger=\"focus\"  data-html=\"true\" title=\"{{ concurso.nombre }} ({{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }})\" data-content=\"{{concurso.descripcion}}</br><a href='{{concurso.link}}' target='_blank'>Web Oficial</a>\">{{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }}</a>
-\t\t\t\t\t\t\t    \t\t\t</td>
-\t\t\t\t\t\t\t    \t\t\t{% set free = false %}
-\t\t\t\t\t\t\t    \t\t\t\t{% set busyLeft =  concurso.getMonthsLength() -1 %}
-\t\t\t\t                \t\t{% endif %}
-\t\t\t\t\t\t\t    \t{% endfor %}
-
-\t\t\t\t\t\t\t    \t{% if free %}
-\t\t\t\t\t\t\t    \t\t<td style=\"width:101px; padding: 4px;\"></td>
-\t\t\t\t\t\t\t    \t{% endif %}
-\t\t\t\t\t\t\t    {% endif %}
-\t\t\t                {% endfor %}
-
+\t\t    \t{% for programa in agencia.getProgramas() %}
+\t\t    \t\t<thead>
+\t\t\t            <tr>
+\t\t\t                <th>
+\t\t\t                \t<div style=\"width:200px;\">
+\t\t\t                \t\t{{ programa.nombre }}
+\t\t\t\t    \t\t\t</div>
+\t\t\t\t    \t\t</th>
 \t\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+\t\t\t                {% for m in range(0, monthsInterval) %}
+\t\t\t                \t<th>
+\t\t\t                \t\t<div style=\"width:98px;\">
+\t\t\t                \t\t\t{{ hoy|date_modify('+' ~ m ~ 'months') | date('M-y') }}
+\t\t\t                \t\t</div>
+\t\t\t                \t</th>
+\t\t\t                {% endfor %}
+\t\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+\t\t\t            </tr>
+\t\t\t        </thead>
+\t\t\t        <tbody>
 
-\t\t\t\t\t    </tr>
+\t\t\t    \t\t{% for fondolinea in programa.getFondosLineas() %}
+\t\t\t    \t\t\t<tr>
+\t\t\t    \t\t\t\t<td style=\"width:200px;\">{{ fondolinea.nombre }}</td>
+\t\t\t    \t\t\t\t{% set busyLeft = 0 %}
 
-\t\t\t    \t{% endfor %}
-\t\t    \t</tbody>
+\t\t\t\t\t\t    \t<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+\t\t\t\t                {% for m in range(0, monthsInterval) %}
+\t\t\t\t                \t{% if busyLeft > 0 %}
+\t\t\t\t                \t\t{% set busyLeft = busyLeft - 1 %}
+\t\t\t\t                \t{% else %}
 
-\t    \t{% endfor %}
-    \t</table>
+\t\t\t\t\t                \t{% set columnDate =  hoy|date_modify('+' ~ m ~ 'months') %}
+\t\t\t\t\t                \t{% set free = true %}
 
-    {% endfor %}
+\t\t\t\t\t                \t{% for concurso in fondolinea.getConcursos() %}
+\t\t\t\t\t                \t\t{% if concurso.getFechaInicio()|date('Y-m') == columnDate | date('Y-m')%}
+\t\t\t\t\t\t\t\t    \t\t\t{% set pl = (concurso.fechaInicio|date('d') * 3)|round %}
+\t\t\t\t\t\t\t\t    \t\t\t{% set pr = ((31 - concurso.fechaFinal|date('d'))*3)|round %}
+\t\t\t\t\t\t\t\t    \t\t\t<td padding: 4px;\" colspan=\"{{concurso.getMonthsLength()}}\">
+\t\t\t\t\t\t\t\t    \t\t\t\t<a tabindex=\"0\" class=\"btn btn-primary btn-sm\" style=\"width: {{ 115 * concurso.getMonthsLength() - pl - pr - 18 }}px; background-color: #{{concurso.color}};position: relative;left: {{pl}}px;\" role=\"button\" data-toggle=\"popover\" data-trigger=\"focus\"  data-html=\"true\" title=\"{{ concurso.nombre }} ({{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }})\" data-content=\"{{concurso.descripcion}}</br><a href='{{concurso.link}}' target='_blank'>Web Oficial</a>\">{{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }} </a>
+\t\t\t\t\t\t\t\t    \t\t\t</td>
+\t\t\t\t\t\t\t\t    \t\t\t{% set free = false %}
+\t\t\t\t\t\t\t\t    \t\t\t\t{% set busyLeft =  concurso.getMonthsLength() -1 %}
+\t\t\t\t\t                \t\t{% endif %}
+\t\t\t\t\t\t\t\t    \t{% endfor %}
+
+\t\t\t\t\t\t\t\t    \t{% if free %}
+\t\t\t\t\t\t\t\t    \t\t<td style=\"width:101px; padding: 4px;\">
+\t\t\t\t\t\t\t\t    \t\t\t<div style=\"width:98px;\">
+\t\t\t\t\t\t\t\t    \t\t\t</div>
+\t\t\t\t\t\t\t\t    \t\t</td>
+\t\t\t\t\t\t\t\t    \t{% endif %}
+\t\t\t\t\t\t\t\t    {% endif %}
+\t\t\t\t                {% endfor %}
+
+\t\t\t\t                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+\t\t\t\t\t\t    </tr>
+
+\t\t\t\t    \t{% endfor %}
+\t\t\t    \t</tbody>
+
+\t\t    \t{% endfor %}
+\t    \t</table>
+
+\t    {% endfor %}
+\t</div>
 
     <script type=\"text/javascript\">
 \t\twindow.onload = function() {

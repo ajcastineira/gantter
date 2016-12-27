@@ -1,24 +1,39 @@
-# To get started with security, check out the documentation:
-# http://symfony.com/doc/current/security.html
-security:
+##146.155.0.0 a 146.155.255.255
 
-    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
-    providers:
-        in_memory:
-            memory: ~
+security:
+    encoders:
+        GanttBundle\Entity\User:
+            algorithm: bcrypt
 
     firewalls:
-        # disables authentication for assets and the profiler, adapt it according to your needs
-        dev:
-            pattern: ^/(_(profiler|wdt)|css|images|js)/
-            security: false
-
         main:
+            pattern:    ^/
+            http_basic: ~
+            provider: our_db_provider
             anonymous: ~
-            # activate different ways to authenticate
+            logout:
+                invalidate_session: true
+                path:   /logout
+                target: /
+            #form_login:
+                #login_path: /login
+                #check_path: /login_check
+            simple_form:
+                authenticator: multi_authenticator
+                check_path: /login_check
+                login_path: /login
+            switch_user: {role: ROLE_ADMIN, parameter: impersonate}
 
-            # http_basic: ~
-            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
+    access_control:
+        - { path: ^/login, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login_check$, roles: [ROLE_ADMIN, ROLE_OTHER] }
+        - { path: ^/$, roles: IS_AUTHENTICATED_ANONYMOUSLY, ip: 122.0.0.1 }
+        - { path: ^/$, roles: ROLE_OTHER }
 
-            # form_login: ~
-            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+    providers:
+        our_db_provider:
+            entity:
+                class: GanttBundle:User
+                property: email
+                # if you're using multiple entity managers
+                # manager_name: customer

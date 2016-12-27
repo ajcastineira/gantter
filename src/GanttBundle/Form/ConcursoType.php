@@ -23,6 +23,7 @@ class ConcursoType extends AbstractType
             ->add('color', null,array('label' => 'Color', 'required' => true,'attr' => array('class'=>'form-control jscolor')))
             ->add('fondolinea', EntityType::class, array(
                 'label' => 'Fondo o Linea',
+                'group_by' => 'programa.getGroupName',
                 'attr' => array('class'=>'form-control'),
                 'class' => 'GanttBundle:FondoLinea',
                 'choice_label' => 'nombre',

@@ -134,4 +134,14 @@ class Programa
     {
         return $this->fondoslineas;
     }
+
+    /**
+     * Get nombre del grupo
+     *
+     * @return string
+     */
+    public function getGroupName()
+    {
+        return $this->getAgencia()->getNombre()." - ".$this->getNombre();
+    }
 }

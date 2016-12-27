@@ -1,69 +1,82 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Bienvenido a Gantter {{latestDeadline|date("d/m/Y")}}</h1>
+    <h1>Bienvenido a Gantter</h1>
 
-    {% for agencia in agencias %}
-    	<strong>{{ agencia.nombre }} </strong></br>
+    <div style="max-width:1024px; overflow-x:scroll;">
+	    {% for agencia in agencias %}
+	    	<strong>{{ agencia.nombre }} </strong></br>
 
-    	<table class="table table-bordered" style="width: initial;">
+	    	<table class="table table-bordered" style="width: initial;">
 
-	    	{% for programa in agencia.getProgramas() %}
-	    		<thead>
-		            <tr>
-		                <th>{{ programa.nombre }}</th>
-		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		                {% for m in range(0, monthsInterval) %}
-		                	<th>{{ hoy|date_modify('+' ~ m ~ 'months') | date('M-y') }}</th>
-		                {% endfor %}
-		                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-		            </tr>
-		        </thead>
-		        <tbody>
-
-		    		{% for fondolinea in programa.getFondosLineas() %}
-		    			<tr>
-		    				<td style="width:200px;">{{ fondolinea.nombre }}</td>
-		    				{% set busyLeft = 0 %}
-
-					    	<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
-			                {% for m in range(0, monthsInterval) %}
-			                	{% if busyLeft > 0 %}
-			                		{% set busyLeft = busyLeft - 1 %}
-			                	{% else %}
-
-				                	{% set columnDate =  hoy|date_modify('+' ~ m ~ 'months') %}
-				                	{% set free = true %}
-
-				                	{% for concurso in fondolinea.getConcursos() %}
-				                		{% if concurso.getFechaInicio()|date('Y-m') == columnDate | date('Y-m')%}
-							    			{% set pl = (concurso.fechaInicio|date('d') * 3)|round %}
-							    			{% set pr = ((31 - concurso.fechaFinal|date('d'))*3)|round %}
-							    			<td style="width:101px; padding: 4px;" colspan="{{concurso.getMonthsLength()}}">
-							    				<a tabindex="0" class="btn btn-primary btn-sm" style="width: {{ 101 * concurso.getMonthsLength() - pl - pr - 8 }}px; background-color: #{{concurso.color}};position: relative;left: {{pl}}px;" role="button" data-toggle="popover" data-trigger="focus"  data-html="true" title="{{ concurso.nombre }} ({{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }})" data-content="{{concurso.descripcion}}</br><a href='{{concurso.link}}' target='_blank'>Web Oficial</a>">{{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }}</a>
-							    			</td>
-							    			{% set free = false %}
-							    				{% set busyLeft =  concurso.getMonthsLength() -1 %}
-				                		{% endif %}
-							    	{% endfor %}
-
-							    	{% if free %}
-							    		<td style="width:101px; padding: 4px;"></td>
-							    	{% endif %}
-							    {% endif %}
-			                {% endfor %}
-
+		    	{% for programa in agencia.getProgramas() %}
+		    		<thead>
+			            <tr>
+			                <th>
+			                	<div style="width:200px;">
+			                		{{ programa.nombre }}
+				    			</div>
+				    		</th>
 			                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+			                {% for m in range(0, monthsInterval) %}
+			                	<th>
+			                		<div style="width:98px;">
+			                			{{ hoy|date_modify('+' ~ m ~ 'months') | date('M-y') }}
+			                		</div>
+			                	</th>
+			                {% endfor %}
+			                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+			            </tr>
+			        </thead>
+			        <tbody>
 
-					    </tr>
+			    		{% for fondolinea in programa.getFondosLineas() %}
+			    			<tr>
+			    				<td style="width:200px;">{{ fondolinea.nombre }}</td>
+			    				{% set busyLeft = 0 %}
 
-			    	{% endfor %}
-		    	</tbody>
+						    	<!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+				                {% for m in range(0, monthsInterval) %}
+				                	{% if busyLeft > 0 %}
+				                		{% set busyLeft = busyLeft - 1 %}
+				                	{% else %}
 
-	    	{% endfor %}
-    	</table>
+					                	{% set columnDate =  hoy|date_modify('+' ~ m ~ 'months') %}
+					                	{% set free = true %}
 
-    {% endfor %}
+					                	{% for concurso in fondolinea.getConcursos() %}
+					                		{% if concurso.getFechaInicio()|date('Y-m') == columnDate | date('Y-m')%}
+								    			{% set pl = (concurso.fechaInicio|date('d') * 3)|round %}
+								    			{% set pr = ((31 - concurso.fechaFinal|date('d'))*3)|round %}
+								    			<td padding: 4px;" colspan="{{concurso.getMonthsLength()}}">
+								    				<a tabindex="0" class="btn btn-primary btn-sm" style="width: {{ 115 * concurso.getMonthsLength() - pl - pr - 18 }}px; background-color: #{{concurso.color}};position: relative;left: {{pl}}px;" role="button" data-toggle="popover" data-trigger="focus"  data-html="true" title="{{ concurso.nombre }} ({{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }})" data-content="{{concurso.descripcion}}</br><a href='{{concurso.link}}' target='_blank'>Web Oficial</a>">{{ concurso.getFechaInicio()|date('d-m') }}&nbsp; al &nbsp;{{ concurso.getFechaFinal()|date('d-m') }} </a>
+								    			</td>
+								    			{% set free = false %}
+								    				{% set busyLeft =  concurso.getMonthsLength() -1 %}
+					                		{% endif %}
+								    	{% endfor %}
+
+								    	{% if free %}
+								    		<td style="width:101px; padding: 4px;">
+								    			<div style="width:98px;">
+								    			</div>
+								    		</td>
+								    	{% endif %}
+								    {% endif %}
+				                {% endfor %}
+
+				                <!-- cambiar aqui!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! -->
+
+						    </tr>
+
+				    	{% endfor %}
+			    	</tbody>
+
+		    	{% endfor %}
+	    	</table>
+
+	    {% endfor %}
+	</div>
 
     <script type="text/javascript">
 		window.onload = function() {

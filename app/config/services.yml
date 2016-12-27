@@ -7,3 +7,15 @@ services:
 #    service_name:
 #        class: AppBundle\Directory\ClassName
 #        arguments: ["@another_service_name", "plain_value", "%parameter_name%"]
+  gantterbundle.helper.siding:
+    class: GanttBundle\Helper\SidingHelper
+    arguments:
+      entityManager: "@doctrine.orm.entity_manager"
+      container: "@service_container"
+
+  multi_authenticator:
+    class: GanttBundle\Security\MultiAuthenticator
+    arguments: 
+      encoder: "@security.password_encoder"
+      entityManager: "@doctrine.orm.entity_manager"
+      siding: "@gantterbundle.helper.siding"

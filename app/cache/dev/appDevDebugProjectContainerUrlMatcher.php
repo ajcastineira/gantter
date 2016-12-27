@@ -362,6 +362,27 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        // login_route
+        if ($pathinfo === '/login') {
+            return array (  '_controller' => 'GanttBundle\\Controller\\SecurityController::loginAction',  '_route' => 'login_route',);
+        }
+
+        // sign_done
+        if ($pathinfo === '/signed') {
+            if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                goto not_sign_done;
+            }
+
+            return array (  '_controller' => 'GanttBundle\\Controller\\SecurityController::signedAction',  '_route' => 'sign_done',);
+        }
+        not_sign_done:
+
+        // login_check
+        if ($pathinfo === '/login_check') {
+            return array (  '_controller' => 'GanttBundle\\Controller\\SecurityController::loginCheckAction',  '_route' => 'login_check',);
+        }
+
         // homepage
         if (rtrim($pathinfo, '/') === '') {
             if (substr($pathinfo, -1) !== '/') {
@@ -369,6 +390,11 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
             }
 
             return array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);
+        }
+
+        // logout
+        if ($pathinfo === '/logout') {
+            return array('_route' => 'logout');
         }
 
         throw 0 < count($allow) ? new MethodNotAllowedException(array_unique($allow)) : new ResourceNotFoundException();

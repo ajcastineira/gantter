@@ -265,4 +265,15 @@ class Programa extends \GanttBundle\Entity\Programa implements \Doctrine\ORM\Pro
         return parent::getFondoslineas();
     }
 
+    /**
+     * {@inheritDoc}
+     */
+    public function getGroupName()
+    {
+
+        $this->__initializer__ && $this->__initializer__->__invoke($this, 'getGroupName', array());
+
+        return parent::getGroupName();
+    }
+
 }

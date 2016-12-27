@@ -10,3 +10,11 @@ parameters:
     mailer_user: null
     mailer_password: null
     secret: 9a5b94954367390405b6e9a15348958837c481d7
+
+
+# WSDL service configuration
+    wsdl_uri:           https://intrawww.ing.puc.cl/siding/ws/invpreg.wsdl
+    wsdl_auth:          1 #0 = SOAP_AUTHENTICATION_BASIC, 1 = SOAP_AUTHENTICATION_DIGEST
+    wsdl_login:         invpreg
+    wsdl_password:      ipJTusRvd6.
+    wsdl_cache:         0 ;0 = WSDL_CACHE_NONE, 1 = WSDL_CACHE_DISK, 2 = WSDL_CACHE_MEMORY, 3 = WSDL_CACHE_BOTH
