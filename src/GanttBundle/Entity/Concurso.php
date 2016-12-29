@@ -3,6 +3,7 @@
 namespace GanttBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Doctrine\Common\Collections\ArrayCollection;
 
 /**
  * Concurso
@@ -68,6 +69,15 @@ class Concurso
      * @ORM\JoinColumn(name="fondolinea_id", referencedColumnName="id")
      */
     private $fondolinea;
+
+    /**
+     * @ORM\OneToMany(targetEntity="Hito", mappedBy="concurso", cascade={"persist"})
+     */
+    private $hitos;
+
+    public function __construct() {
+        $this->hitos = new ArrayCollection();
+    }
 
 
     /**
@@ -248,5 +258,38 @@ class Concurso
         $d1 = new \DateTime($this->fechaInicio->format('Y').'-'.$this->fechaInicio->format('m').'-1');
 
         return intval($d1->diff($d2)->format('%m')) + 1;
+    }
+
+    /**
+     * Add hitos
+     *
+     * @param \GanttBundle\Entity\Hito $hitos
+     * @return Concurso
+     */
+    public function addHito(\GanttBundle\Entity\Hito $hitos)
+    {
+        $this->hitos[] = $hitos;
+
+        return $this;
+    }
+
+    /**
+     * Remove hitos
+     *
+     * @param \GanttBundle\Entity\Hito $hitos
+     */
+    public function removeHito(\GanttBundle\Entity\Hito $hitos)
+    {
+        $this->hitos->removeElement($hitos);
+    }
+
+    /**
+     * Get hitos
+     *
+     * @return \Doctrine\Common\Collections\Collection 
+     */
+    public function getHitos()
+    {
+        return $this->hitos;
     }
 }

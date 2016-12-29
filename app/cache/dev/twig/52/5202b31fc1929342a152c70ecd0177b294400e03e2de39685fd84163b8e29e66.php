@@ -21,20 +21,20 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_579eb4fb4139a2fb2cdde028dd4ad4b39923a1a9d06495072076e478e59afd19 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_579eb4fb4139a2fb2cdde028dd4ad4b39923a1a9d06495072076e478e59afd19->enter($__internal_579eb4fb4139a2fb2cdde028dd4ad4b39923a1a9d06495072076e478e59afd19_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/new.html.twig"));
+        $__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611->enter($__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_579eb4fb4139a2fb2cdde028dd4ad4b39923a1a9d06495072076e478e59afd19->leave($__internal_579eb4fb4139a2fb2cdde028dd4ad4b39923a1a9d06495072076e478e59afd19_prof);
+        $__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611->leave($__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_efdb395a9e6dc394a577b754b703d5a374a7f05ea5b4efc853ee5f9accdfc156 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_efdb395a9e6dc394a577b754b703d5a374a7f05ea5b4efc853ee5f9accdfc156->enter($__internal_efdb395a9e6dc394a577b754b703d5a374a7f05ea5b4efc853ee5f9accdfc156_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e->enter($__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <script src=\"../js/jscolor.js\"></script>
@@ -46,22 +46,107 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
         echo "
         ";
         // line 8
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'widget');
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "nombre", array()), 'row');
         echo "
-        <input type=\"submit\" class=\"btn btn-primary btn1\"  value=\"Postular\" />
-    ";
+        ";
+        // line 9
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fechaInicio", array()), 'row');
+        echo "
+        ";
         // line 10
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fechaFinal", array()), 'row');
+        echo "
+        ";
+        // line 11
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "descripcion", array()), 'row');
+        echo "
+        ";
+        // line 12
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "link", array()), 'row');
+        echo "
+        ";
+        // line 13
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "color", array()), 'row');
+        echo "
+        ";
+        // line 14
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "fondolinea", array()), 'row');
+        echo "
+        ";
+        // line 15
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "hitos", array()), 'label');
+        echo "
+        <ul class=\"hitos\" data-prototype=\"";
+        // line 16
+        echo twig_escape_filter($this->env, $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->searchAndRenderBlock($this->getAttribute($this->getAttribute($this->getAttribute((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), "hitos", array()), "vars", array()), "prototype", array()), 'widget'), "html_attr");
+        echo "\">
+        \t
+\t\t</ul>
+        <input type=\"submit\" class=\"btn btn-primary btn1\"  value=\"Crear\" />
+    ";
+        // line 20
         echo         $this->env->getExtension('Symfony\Bridge\Twig\Extension\FormExtension')->renderer->renderBlock((isset($context["form"]) ? $context["form"] : $this->getContext($context, "form")), 'form_end');
         echo "
 
     <a href=\"";
-        // line 12
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("application_index");
+        // line 22
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("concurso_index");
         echo "\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
     
+
+
+    <script type=\"text/javascript\">
+    \tvar \$collectionHolder;
+
+\t\t// setup an \"add a tag\" link
+\t\tvar \$addTagLink = \$('<a href=\"#\" class=\"add_tag_link\">Add a tag</a>');
+\t\tvar \$newLinkLi = \$('<div></div>').append(\$addTagLink);
+
+\t\tjQuery(document).ready(function() {
+\t\t    // Get the ul that holds the collection of hitos
+\t\t    \$collectionHolder = \$('ul.hitos');
+
+\t\t    // add the \"add a tag\" anchor and li to the hitos ul
+\t\t    \$collectionHolder.append(\$newLinkLi);
+
+\t\t    // count the current form inputs we have (e.g. 2), use that as the new
+\t\t    // index when inserting a new item (e.g. 2)
+\t\t    \$collectionHolder.data('index', \$collectionHolder.find(':input').length);
+
+\t\t    \$addTagLink.on('click', function(e) {
+\t\t        // prevent the link from creating a \"#\" on the URL
+\t\t        e.preventDefault();
+
+\t\t        // add a new tag form (see next code block)
+\t\t        addTagForm(\$collectionHolder, \$newLinkLi);
+\t\t    });
+
+\t\t    \$('#ganttbundle_concurso_hitos').parent().hide();
+\t\t});
+
+\t\tfunction addTagForm(\$collectionHolder, \$newLinkLi) {
+\t\t    // Get the data-prototype explained earlier
+\t\t    var prototype = \$collectionHolder.data('prototype');
+
+\t\t    // get the new index
+\t\t    var index = \$collectionHolder.data('index');
+
+\t\t    // Replace '__name__' in the prototype's HTML to
+\t\t    // instead be a number based on how many items we have
+\t\t    var newForm = prototype.replace(/__name__/g, index);
+
+\t\t    // increase the index with one for the next item
+\t\t    \$collectionHolder.data('index', index + 1);
+
+\t\t    // Display the form in the page in an li, before the \"Add a tag\" link li
+\t\t    var \$newFormLi = \$('<div class=\"panel panel-default\" style=\"padding: 10px 20px 20px 20px;\"></div>').append(newForm);
+\t\t    \$newLinkLi.before(\$newFormLi);
+\t\t}
+\t</script>
+
 ";
         
-        $__internal_efdb395a9e6dc394a577b754b703d5a374a7f05ea5b4efc853ee5f9accdfc156->leave($__internal_efdb395a9e6dc394a577b754b703d5a374a7f05ea5b4efc853ee5f9accdfc156_prof);
+        $__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e->leave($__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e_prof);
 
     }
 
@@ -77,7 +162,7 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
 
     public function getDebugInfo()
     {
-        return array (  59 => 12,  54 => 10,  49 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
+        return array (  93 => 22,  88 => 20,  81 => 16,  77 => 15,  73 => 14,  69 => 13,  65 => 12,  61 => 11,  57 => 10,  53 => 9,  49 => 8,  45 => 7,  40 => 4,  34 => 3,  11 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -97,12 +182,73 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
     <h1>Crear Concurso</h1>
 
     {{ form_start(form) }}
-        {{ form_widget(form) }}
-        <input type=\"submit\" class=\"btn btn-primary btn1\"  value=\"Postular\" />
+        {{ form_row(form.nombre) }}
+        {{ form_row(form.fechaInicio) }}
+        {{ form_row(form.fechaFinal) }}
+        {{ form_row(form.descripcion) }}
+        {{ form_row(form.link) }}
+        {{ form_row(form.color) }}
+        {{ form_row(form.fondolinea) }}
+        {{ form_label(form.hitos) }}
+        <ul class=\"hitos\" data-prototype=\"{{ form_widget(form.hitos.vars.prototype)|e('html_attr') }}\">
+        \t
+\t\t</ul>
+        <input type=\"submit\" class=\"btn btn-primary btn1\"  value=\"Crear\" />
     {{ form_end(form) }}
 
-    <a href=\"{{ path('application_index') }}\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
+    <a href=\"{{ path('concurso_index') }}\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
     
+
+
+    <script type=\"text/javascript\">
+    \tvar \$collectionHolder;
+
+\t\t// setup an \"add a tag\" link
+\t\tvar \$addTagLink = \$('<a href=\"#\" class=\"add_tag_link\">Add a tag</a>');
+\t\tvar \$newLinkLi = \$('<div></div>').append(\$addTagLink);
+
+\t\tjQuery(document).ready(function() {
+\t\t    // Get the ul that holds the collection of hitos
+\t\t    \$collectionHolder = \$('ul.hitos');
+
+\t\t    // add the \"add a tag\" anchor and li to the hitos ul
+\t\t    \$collectionHolder.append(\$newLinkLi);
+
+\t\t    // count the current form inputs we have (e.g. 2), use that as the new
+\t\t    // index when inserting a new item (e.g. 2)
+\t\t    \$collectionHolder.data('index', \$collectionHolder.find(':input').length);
+
+\t\t    \$addTagLink.on('click', function(e) {
+\t\t        // prevent the link from creating a \"#\" on the URL
+\t\t        e.preventDefault();
+
+\t\t        // add a new tag form (see next code block)
+\t\t        addTagForm(\$collectionHolder, \$newLinkLi);
+\t\t    });
+
+\t\t    \$('#ganttbundle_concurso_hitos').parent().hide();
+\t\t});
+
+\t\tfunction addTagForm(\$collectionHolder, \$newLinkLi) {
+\t\t    // Get the data-prototype explained earlier
+\t\t    var prototype = \$collectionHolder.data('prototype');
+
+\t\t    // get the new index
+\t\t    var index = \$collectionHolder.data('index');
+
+\t\t    // Replace '__name__' in the prototype's HTML to
+\t\t    // instead be a number based on how many items we have
+\t\t    var newForm = prototype.replace(/__name__/g, index);
+
+\t\t    // increase the index with one for the next item
+\t\t    \$collectionHolder.data('index', index + 1);
+
+\t\t    // Display the form in the page in an li, before the \"Add a tag\" link li
+\t\t    var \$newFormLi = \$('<div class=\"panel panel-default\" style=\"padding: 10px 20px 20px 20px;\"></div>').append(newForm);
+\t\t    \$newLinkLi.before(\$newFormLi);
+\t\t}
+\t</script>
+
 {% endblock %}
 ", "concurso/new.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/concurso/new.html.twig");
     }

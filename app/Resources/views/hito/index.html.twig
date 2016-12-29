@@ -1,0 +1,41 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Hitos list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Texto</th>
+                <th>Fecha</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for hito in hitos %}
+            <tr>
+                <td><a href="{{ path('hito_show', { 'id': hito.id }) }}">{{ hito.id }}</a></td>
+                <td>{{ hito.texto }}</td>
+                <td>{% if hito.fecha %}{{ hito.fecha|date('Y-m-d') }}{% endif %}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('hito_show', { 'id': hito.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('hito_edit', { 'id': hito.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('hito_new') }}">Create a new hito</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -69,6 +69,15 @@ class Concurso
      */
     private $fondolinea;
 
+    /**
+     * @ORM\OneToMany(targetEntity="Hito", mappedBy="concurso")
+     */
+    private $hitos;
+
+    public function __construct() {
+        $this->hitos = new ArrayCollection();
+    }
+
 
     /**
      * Get id
@@ -216,5 +225,37 @@ class Concurso
     public function getColor()
     {
         return $this->color;
+    }
+
+    /**
+     * Set fondolinea
+     *
+     * @param \GanttBundle\Entity\FondoLinea $fondolinea
+     * @return Concurso
+     */
+    public function setFondolinea(\GanttBundle\Entity\FondoLinea $fondolinea = null)
+    {
+        $this->fondolinea = $fondolinea;
+
+        return $this;
+    }
+
+    /**
+     * Get fondolinea
+     *
+     * @return \GanttBundle\Entity\FondoLinea 
+     */
+    public function getFondolinea()
+    {
+        return $this->fondolinea;
+    }
+
+    public function getMonthsLength()
+    {
+        $d2 = new \DateTime($this->fechaFinal->format('Y').'-'.$this->fechaFinal->format('m').'-1');
+        $hoy = new \DateTime();
+        $d1 = new \DateTime($this->fechaInicio->format('Y').'-'.$this->fechaInicio->format('m').'-1');
+
+        return intval($d1->diff($d2)->format('%m')) + 1;
     }
 }

@@ -300,6 +300,68 @@ class appDevDebugProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBund
 
         }
 
+        if (0 === strpos($pathinfo, '/hito')) {
+            // hito_index
+            if (rtrim($pathinfo, '/') === '/hito') {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_hito_index;
+                }
+
+                if (substr($pathinfo, -1) !== '/') {
+                    return $this->redirect($pathinfo.'/', 'hito_index');
+                }
+
+                return array (  '_controller' => 'GanttBundle\\Controller\\HitoController::indexAction',  '_route' => 'hito_index',);
+            }
+            not_hito_index:
+
+            // hito_new
+            if ($pathinfo === '/hito/new') {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_hito_new;
+                }
+
+                return array (  '_controller' => 'GanttBundle\\Controller\\HitoController::newAction',  '_route' => 'hito_new',);
+            }
+            not_hito_new:
+
+            // hito_show
+            if (preg_match('#^/hito/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'HEAD'));
+                    goto not_hito_show;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hito_show')), array (  '_controller' => 'GanttBundle\\Controller\\HitoController::showAction',));
+            }
+            not_hito_show:
+
+            // hito_edit
+            if (preg_match('#^/hito/(?P<id>[^/]++)/edit$#s', $pathinfo, $matches)) {
+                if (!in_array($this->context->getMethod(), array('GET', 'POST', 'HEAD'))) {
+                    $allow = array_merge($allow, array('GET', 'POST', 'HEAD'));
+                    goto not_hito_edit;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hito_edit')), array (  '_controller' => 'GanttBundle\\Controller\\HitoController::editAction',));
+            }
+            not_hito_edit:
+
+            // hito_delete
+            if (preg_match('#^/hito/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                if ($this->context->getMethod() != 'DELETE') {
+                    $allow[] = 'DELETE';
+                    goto not_hito_delete;
+                }
+
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'hito_delete')), array (  '_controller' => 'GanttBundle\\Controller\\HitoController::deleteAction',));
+            }
+            not_hito_delete:
+
+        }
+
         if (0 === strpos($pathinfo, '/programa')) {
             // programa_index
             if (rtrim($pathinfo, '/') === '/programa') {

@@ -6,6 +6,8 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use Symfony\Component\Form\Extension\Core\Type\CollectionType;
+use GanttBundle\Form\HitoType;
 
 class ConcursoType extends AbstractType
 {
@@ -26,8 +28,9 @@ class ConcursoType extends AbstractType
                 'group_by' => 'programa.getGroupName',
                 'attr' => array('class'=>'form-control'),
                 'class' => 'GanttBundle:FondoLinea',
-                'choice_label' => 'nombre',
-            ));
+                'choice_label' => 'nombre',))
+            ->add('hitos', CollectionType::class, array('entry_type' => HitoType::class,'allow_add' => true,))
+            ;
     }
     
     /**
