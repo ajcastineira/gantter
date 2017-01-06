@@ -58,6 +58,16 @@
                   </li>
                 {% endif %}
               </ul>
+
+              <ul class="nav navbar-nav navbar-right">
+
+                    {% if is_granted(['IS_AUTHENTICATED_FULLY', 'IS_AUTHENTICATED_REMEMBERED']) %}
+                      <li><a href="{{path('logout')}}">Cerrar Sesión</a></li>
+                    {% else %}
+                      <li><a href="/login">Iniciar Sesión</a></li>
+                    {% endif %}
+                  </ul>
+
             </div><!-- /.navbar-collapse -->
           </div><!-- /.container-fluid -->
         </nav>

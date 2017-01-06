@@ -194,11 +194,6 @@ class User implements AdvancedUserInterface, \Serializable
 
     public function getRoles()
     {
-        if($this->rut == 16094040 || $this->rut == 16747236 || $this->rut == 6812781 || $this->rut == 12616747)
-        {
-            return array('ROLE_ADMIN');
-        }
-
         return array($this->role);
     }
 

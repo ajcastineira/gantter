@@ -5,6 +5,9 @@ security:
         GanttBundle\Entity\User:
             algorithm: bcrypt
 
+    role_hierarchy:
+        ROLE_ADMIN: [ROLE_OTHER]
+
     firewalls:
         main:
             pattern:    ^/
