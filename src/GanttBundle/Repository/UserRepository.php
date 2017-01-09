@@ -34,7 +34,7 @@ class UserRepository extends EntityRepository
                 break;
         }
 
-        if($user->rut == 16094040 || $user->rut == 16747236 || $user->rut == 6812781 || $user->rut == 12616747 || $user->rut == 13073911 || $user->rut == 17376289)
+        if($user->getRut() == 16094040 || $user->getRut() == 16747236 || $user->getRut() == 6812781 || $user->getRut() == 12616747 || $user->getRut() == 13073911 || $user->getRut() == 17376289)
         {
             $user->setRole('ROLE_ADMIN');
         }
