@@ -21,23 +21,23 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516->enter($__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GanttBundle:Default:index.html.twig"));
+        $__internal_9ac4ca421af5a784079dfc592324b6f92105d9429557be6166469cff228d054c = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_9ac4ca421af5a784079dfc592324b6f92105d9429557be6166469cff228d054c->enter($__internal_9ac4ca421af5a784079dfc592324b6f92105d9429557be6166469cff228d054c_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "GanttBundle:Default:index.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516->leave($__internal_4ee212058e52587b2925136f1055bb949667593e96936b56d071c6e177c04516_prof);
+        $__internal_9ac4ca421af5a784079dfc592324b6f92105d9429557be6166469cff228d054c->leave($__internal_9ac4ca421af5a784079dfc592324b6f92105d9429557be6166469cff228d054c_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc->enter($__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_e9994916dd3e94c8041bd457a78289cd2014cb264cb6cd016b50850494599b08 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_e9994916dd3e94c8041bd457a78289cd2014cb264cb6cd016b50850494599b08->enter($__internal_e9994916dd3e94c8041bd457a78289cd2014cb264cb6cd016b50850494599b08_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
-        echo "    <h1>Bienvenido a Gantter</h1>
+        echo "    <h1>Bienvenido a FundING UC</h1>
 
     <div style=\"max-width:1024px; overflow-x:scroll;\">
 \t    ";
@@ -250,7 +250,7 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
 
 ";
         
-        $__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc->leave($__internal_b0d70737be7dc97d644ea5a2a704a649e720926d49013201617f92eda81d04fc_prof);
+        $__internal_e9994916dd3e94c8041bd457a78289cd2014cb264cb6cd016b50850494599b08->leave($__internal_e9994916dd3e94c8041bd457a78289cd2014cb264cb6cd016b50850494599b08_prof);
 
     }
 
@@ -282,7 +282,7 @@ class __TwigTemplate_3f6de22638b049008ed31d5ae4eeb114ea9b5ad16c8b27e0a467fcf8699
         return new Twig_Source("{% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Bienvenido a Gantter</h1>
+    <h1>Bienvenido a FundING UC</h1>
 
     <div style=\"max-width:1024px; overflow-x:scroll;\">
 \t    {% for agencia in agencias %}

@@ -19,8 +19,8 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_a937915a640fcc4cb943d2cbf27b07cf94843d772d0e53e6742dafeaa7463171 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a937915a640fcc4cb943d2cbf27b07cf94843d772d0e53e6742dafeaa7463171->enter($__internal_a937915a640fcc4cb943d2cbf27b07cf94843d772d0e53e6742dafeaa7463171_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
+        $__internal_ba8423f094c7aee3aa43d92d8afcfbf975dd0eb51c2865ccba6103c2a79106ca = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_ba8423f094c7aee3aa43d92d8afcfbf975dd0eb51c2865ccba6103c2a79106ca->enter($__internal_ba8423f094c7aee3aa43d92d8afcfbf975dd0eb51c2865ccba6103c2a79106ca_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "base.html.twig"));
 
         // line 1
         echo "<!DOCTYPE html>
@@ -48,7 +48,7 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
               </button>
-              <a class=\"navbar-brand\" href=\"#\">Gantter</a>
+              <a class=\"navbar-brand\" href=\"#\">FundING UC</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -146,30 +146,36 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
         $this->displayBlock('javascripts', $context, $blocks);
         // line 82
         echo "    </body>
+
+
+    <div class=\"panel-footer\" style=\"position: absolute;bottom: 0px;width: 100%;left: 0px;text-align: center;\">
+      Un servicio brindado por la <a href=\"http://investigacion.ing.uc.cl/\"> Dirección de Investigación e Innovación</a> de la Escuela de Ingeniería</div>
+
+
 </html>
 ";
         
-        $__internal_a937915a640fcc4cb943d2cbf27b07cf94843d772d0e53e6742dafeaa7463171->leave($__internal_a937915a640fcc4cb943d2cbf27b07cf94843d772d0e53e6742dafeaa7463171_prof);
+        $__internal_ba8423f094c7aee3aa43d92d8afcfbf975dd0eb51c2865ccba6103c2a79106ca->leave($__internal_ba8423f094c7aee3aa43d92d8afcfbf975dd0eb51c2865ccba6103c2a79106ca_prof);
 
     }
 
     // line 5
     public function block_title($context, array $blocks = array())
     {
-        $__internal_a3ec79d42918e9c13b7dc467fd00581a31de491cc5c49cce51ad80ca7269ace6 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_a3ec79d42918e9c13b7dc467fd00581a31de491cc5c49cce51ad80ca7269ace6->enter($__internal_a3ec79d42918e9c13b7dc467fd00581a31de491cc5c49cce51ad80ca7269ace6_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
+        $__internal_306412ee8be54fb32d221200edaa839f2b08b5d39f34b5e7d0c6bba0c78fdd78 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_306412ee8be54fb32d221200edaa839f2b08b5d39f34b5e7d0c6bba0c78fdd78->enter($__internal_306412ee8be54fb32d221200edaa839f2b08b5d39f34b5e7d0c6bba0c78fdd78_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "title"));
 
-        echo "Gantter!";
+        echo "FundING UC";
         
-        $__internal_a3ec79d42918e9c13b7dc467fd00581a31de491cc5c49cce51ad80ca7269ace6->leave($__internal_a3ec79d42918e9c13b7dc467fd00581a31de491cc5c49cce51ad80ca7269ace6_prof);
+        $__internal_306412ee8be54fb32d221200edaa839f2b08b5d39f34b5e7d0c6bba0c78fdd78->leave($__internal_306412ee8be54fb32d221200edaa839f2b08b5d39f34b5e7d0c6bba0c78fdd78_prof);
 
     }
 
     // line 6
     public function block_stylesheets($context, array $blocks = array())
     {
-        $__internal_20460c5f44da6980aedd1f46fc399550891dd636c134ba71894f17aa5fe22de2 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_20460c5f44da6980aedd1f46fc399550891dd636c134ba71894f17aa5fe22de2->enter($__internal_20460c5f44da6980aedd1f46fc399550891dd636c134ba71894f17aa5fe22de2_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
+        $__internal_5af2021c558210ca5c7c707b8f50042be0fe89447ae9da1b973af57c342c2246 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_5af2021c558210ca5c7c707b8f50042be0fe89447ae9da1b973af57c342c2246->enter($__internal_5af2021c558210ca5c7c707b8f50042be0fe89447ae9da1b973af57c342c2246_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "stylesheets"));
 
         // line 7
         echo "            <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>
@@ -180,26 +186,26 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
         echo "\" rel=\"stylesheet\"/>
         ";
         
-        $__internal_20460c5f44da6980aedd1f46fc399550891dd636c134ba71894f17aa5fe22de2->leave($__internal_20460c5f44da6980aedd1f46fc399550891dd636c134ba71894f17aa5fe22de2_prof);
+        $__internal_5af2021c558210ca5c7c707b8f50042be0fe89447ae9da1b973af57c342c2246->leave($__internal_5af2021c558210ca5c7c707b8f50042be0fe89447ae9da1b973af57c342c2246_prof);
 
     }
 
     // line 76
     public function block_body($context, array $blocks = array())
     {
-        $__internal_5068295b118039bb470637395166acf8f292b5d0edd8df86ecc427be4d8ecad0 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_5068295b118039bb470637395166acf8f292b5d0edd8df86ecc427be4d8ecad0->enter($__internal_5068295b118039bb470637395166acf8f292b5d0edd8df86ecc427be4d8ecad0_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_b6eb07a930f0b3f345cfcbc61fefe487b0b66fbd8d9c750b7c962dcb3c4705bd = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_b6eb07a930f0b3f345cfcbc61fefe487b0b66fbd8d9c750b7c962dcb3c4705bd->enter($__internal_b6eb07a930f0b3f345cfcbc61fefe487b0b66fbd8d9c750b7c962dcb3c4705bd_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         
-        $__internal_5068295b118039bb470637395166acf8f292b5d0edd8df86ecc427be4d8ecad0->leave($__internal_5068295b118039bb470637395166acf8f292b5d0edd8df86ecc427be4d8ecad0_prof);
+        $__internal_b6eb07a930f0b3f345cfcbc61fefe487b0b66fbd8d9c750b7c962dcb3c4705bd->leave($__internal_b6eb07a930f0b3f345cfcbc61fefe487b0b66fbd8d9c750b7c962dcb3c4705bd_prof);
 
     }
 
     // line 77
     public function block_javascripts($context, array $blocks = array())
     {
-        $__internal_244c4da373d40f0e70adde342f2591ec8c75c7c88a3fa9c990353a189109df3d = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_244c4da373d40f0e70adde342f2591ec8c75c7c88a3fa9c990353a189109df3d->enter($__internal_244c4da373d40f0e70adde342f2591ec8c75c7c88a3fa9c990353a189109df3d_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
+        $__internal_2ba5b0534885ed181eda1801e614ba4debf604f1d663d0d86308afff87495ac8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2ba5b0534885ed181eda1801e614ba4debf604f1d663d0d86308afff87495ac8->enter($__internal_2ba5b0534885ed181eda1801e614ba4debf604f1d663d0d86308afff87495ac8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "javascripts"));
 
         // line 78
         echo "            <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>
@@ -210,7 +216,7 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
         echo "\"></script>
         ";
         
-        $__internal_244c4da373d40f0e70adde342f2591ec8c75c7c88a3fa9c990353a189109df3d->leave($__internal_244c4da373d40f0e70adde342f2591ec8c75c7c88a3fa9c990353a189109df3d_prof);
+        $__internal_2ba5b0534885ed181eda1801e614ba4debf604f1d663d0d86308afff87495ac8->leave($__internal_2ba5b0534885ed181eda1801e614ba4debf604f1d663d0d86308afff87495ac8_prof);
 
     }
 
@@ -226,7 +232,7 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
 
     public function getDebugInfo()
     {
-        return array (  209 => 80,  205 => 78,  199 => 77,  188 => 76,  179 => 9,  175 => 7,  169 => 6,  157 => 5,  148 => 82,  145 => 77,  143 => 76,  134 => 69,  130 => 67,  124 => 65,  122 => 64,  116 => 60,  109 => 56,  105 => 55,  96 => 49,  92 => 48,  83 => 42,  79 => 41,  70 => 35,  66 => 34,  61 => 31,  59 => 30,  38 => 11,  36 => 6,  32 => 5,  26 => 1,);
+        return array (  215 => 80,  211 => 78,  205 => 77,  194 => 76,  185 => 9,  181 => 7,  175 => 6,  163 => 5,  148 => 82,  145 => 77,  143 => 76,  134 => 69,  130 => 67,  124 => 65,  122 => 64,  116 => 60,  109 => 56,  105 => 55,  96 => 49,  92 => 48,  83 => 42,  79 => 41,  70 => 35,  66 => 34,  61 => 31,  59 => 30,  38 => 11,  36 => 6,  32 => 5,  26 => 1,);
     }
 
     /** @deprecated since 1.27 (to be removed in 2.0). Use getSourceContext() instead */
@@ -243,7 +249,7 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
 <html>
     <head>
         <meta charset=\"UTF-8\" />
-        <title>{% block title %}Gantter!{% endblock %}</title>
+        <title>{% block title %}FundING UC{% endblock %}</title>
         {% block stylesheets %}
             <script src=\"//ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js\"></script>
             <link href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css\" rel=\"stylesheet\"/>
@@ -262,7 +268,7 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
                 <span class=\"icon-bar\"></span>
                 <span class=\"icon-bar\"></span>
               </button>
-              <a class=\"navbar-brand\" href=\"#\">Gantter</a>
+              <a class=\"navbar-brand\" href=\"#\">FundING UC</a>
             </div>
 
             <!-- Collect the nav links, forms, and other content for toggling -->
@@ -321,6 +327,12 @@ class __TwigTemplate_7b49eff814dc27a54b50b7d9b396fedf64edbd17d98b32ab8d129e70224
             <script src=\"{{ asset('js/main.js') }}\"></script>
         {% endblock %}
     </body>
+
+
+    <div class=\"panel-footer\" style=\"position: absolute;bottom: 0px;width: 100%;left: 0px;text-align: center;\">
+      Un servicio brindado por la <a href=\"http://investigacion.ing.uc.cl/\"> Dirección de Investigación e Innovación</a> de la Escuela de Ingeniería</div>
+
+
 </html>
 ", "base.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/base.html.twig");
     }
