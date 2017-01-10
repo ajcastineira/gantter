@@ -21,20 +21,20 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611->enter($__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/new.html.twig"));
+        $__internal_d8bfb8b88e18db1086c98cb91ca307c07bd82b807b11a9103306e7507bc1e0b4 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_d8bfb8b88e18db1086c98cb91ca307c07bd82b807b11a9103306e7507bc1e0b4->enter($__internal_d8bfb8b88e18db1086c98cb91ca307c07bd82b807b11a9103306e7507bc1e0b4_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "concurso/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611->leave($__internal_90466f24a909481d02f5179f15990f8169d6213d9e173e9ab3d7111be83fd611_prof);
+        $__internal_d8bfb8b88e18db1086c98cb91ca307c07bd82b807b11a9103306e7507bc1e0b4->leave($__internal_d8bfb8b88e18db1086c98cb91ca307c07bd82b807b11a9103306e7507bc1e0b4_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e->enter($__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_50c46af10ca8b3f315618dc6ba9d3844f804dbf9e58beaf1af785a7dfacf1b26 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_50c46af10ca8b3f315618dc6ba9d3844f804dbf9e58beaf1af785a7dfacf1b26->enter($__internal_50c46af10ca8b3f315618dc6ba9d3844f804dbf9e58beaf1af785a7dfacf1b26_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <script src=\"../js/jscolor.js\"></script>
@@ -99,7 +99,7 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
     \tvar \$collectionHolder;
 
 \t\t// setup an \"add a tag\" link
-\t\tvar \$addTagLink = \$('<a href=\"#\" class=\"add_tag_link\">Add a tag</a>');
+\t\tvar \$addTagLink = \$('<a href=\"#\" class=\"add_tag_link\">Agregar un Hito</a>');
 \t\tvar \$newLinkLi = \$('<div></div>').append(\$addTagLink);
 
 \t\tjQuery(document).ready(function() {
@@ -146,7 +146,7 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
 
 ";
         
-        $__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e->leave($__internal_35027bd2b79f81ff688af722252188710b74add12e54d85a60040b107539329e_prof);
+        $__internal_50c46af10ca8b3f315618dc6ba9d3844f804dbf9e58beaf1af785a7dfacf1b26->leave($__internal_50c46af10ca8b3f315618dc6ba9d3844f804dbf9e58beaf1af785a7dfacf1b26_prof);
 
     }
 
@@ -204,7 +204,7 @@ class __TwigTemplate_4f1ad8f0f24a539e30d81dd524e65fa78e45fd8188efbd8ad9e1fd0736e
     \tvar \$collectionHolder;
 
 \t\t// setup an \"add a tag\" link
-\t\tvar \$addTagLink = \$('<a href=\"#\" class=\"add_tag_link\">Add a tag</a>');
+\t\tvar \$addTagLink = \$('<a href=\"#\" class=\"add_tag_link\">Agregar un Hito</a>');
 \t\tvar \$newLinkLi = \$('<div></div>').append(\$addTagLink);
 
 \t\tjQuery(document).ready(function() {

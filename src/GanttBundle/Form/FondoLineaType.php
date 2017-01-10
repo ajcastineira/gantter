@@ -15,7 +15,7 @@ class FondoLineaType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nombre')
+        $builder->add('nombre', null,array('label' => 'Nombre', 'required' => true,'attr' => array('class'=>'form-control')))
         ->add('programa', EntityType::class, array(
                 'label' => 'Programa',
                 'attr' => array('class'=>'form-control'),

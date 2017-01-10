@@ -15,7 +15,7 @@ class ProgramaType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nombre')
+        $builder->add('nombre', null,array('label' => 'Nombre', 'required' => true,'attr' => array('class'=>'form-control')))
         ->add('agencia', EntityType::class, array(
                 'label' => 'Agencia',
                 'attr' => array('class'=>'form-control'),

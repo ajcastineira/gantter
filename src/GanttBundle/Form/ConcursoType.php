@@ -29,7 +29,7 @@ class ConcursoType extends AbstractType
                 'attr' => array('class'=>'form-control'),
                 'class' => 'GanttBundle:FondoLinea',
                 'choice_label' => 'nombre',))
-            ->add('hitos', CollectionType::class, array('entry_type' => HitoType::class,'allow_add' => true,))
+            ->add('hitos', CollectionType::class, array('entry_type' => HitoType::class,'allow_add' => true,'label' => 'hitos (próximanente)'))
             ;
     }
     

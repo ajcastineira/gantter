@@ -21,20 +21,20 @@ class __TwigTemplate_93b9b376b82f1b5573bf6d86a4864d00080a94be13173700a97068bb58b
 
     protected function doDisplay(array $context, array $blocks = array())
     {
-        $__internal_229721c1c77d572e5d07fdf63c6078622177608955d77b83daade071309e2bc8 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_229721c1c77d572e5d07fdf63c6078622177608955d77b83daade071309e2bc8->enter($__internal_229721c1c77d572e5d07fdf63c6078622177608955d77b83daade071309e2bc8_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "fondolinea/new.html.twig"));
+        $__internal_2a48d291ccafe5abd7880650aaf0b45c6fee60cf42381e2e6e956359c9619518 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_2a48d291ccafe5abd7880650aaf0b45c6fee60cf42381e2e6e956359c9619518->enter($__internal_2a48d291ccafe5abd7880650aaf0b45c6fee60cf42381e2e6e956359c9619518_prof = new Twig_Profiler_Profile($this->getTemplateName(), "template", "fondolinea/new.html.twig"));
 
         $this->parent->display($context, array_merge($this->blocks, $blocks));
         
-        $__internal_229721c1c77d572e5d07fdf63c6078622177608955d77b83daade071309e2bc8->leave($__internal_229721c1c77d572e5d07fdf63c6078622177608955d77b83daade071309e2bc8_prof);
+        $__internal_2a48d291ccafe5abd7880650aaf0b45c6fee60cf42381e2e6e956359c9619518->leave($__internal_2a48d291ccafe5abd7880650aaf0b45c6fee60cf42381e2e6e956359c9619518_prof);
 
     }
 
     // line 3
     public function block_body($context, array $blocks = array())
     {
-        $__internal_e67474681193fddfffc5baa5e5b2254c0555ae853221b5051d25c387595331a3 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
-        $__internal_e67474681193fddfffc5baa5e5b2254c0555ae853221b5051d25c387595331a3->enter($__internal_e67474681193fddfffc5baa5e5b2254c0555ae853221b5051d25c387595331a3_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
+        $__internal_7bbe4b072b8326a392ac5cb74578483d8030101dc05a5351e8415f8047d53958 = $this->env->getExtension("Symfony\\Bridge\\Twig\\Extension\\ProfilerExtension");
+        $__internal_7bbe4b072b8326a392ac5cb74578483d8030101dc05a5351e8415f8047d53958->enter($__internal_7bbe4b072b8326a392ac5cb74578483d8030101dc05a5351e8415f8047d53958_prof = new Twig_Profiler_Profile($this->getTemplateName(), "block", "body"));
 
         // line 4
         echo "    <h1>Crear Fondo o Linea</h1>
@@ -55,11 +55,11 @@ class __TwigTemplate_93b9b376b82f1b5573bf6d86a4864d00080a94be13173700a97068bb58b
 
     <a href=\"";
         // line 11
-        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("application_index");
+        echo $this->env->getExtension('Symfony\Bridge\Twig\Extension\RoutingExtension')->getPath("fondolinea_index");
         echo "\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
 ";
         
-        $__internal_e67474681193fddfffc5baa5e5b2254c0555ae853221b5051d25c387595331a3->leave($__internal_e67474681193fddfffc5baa5e5b2254c0555ae853221b5051d25c387595331a3_prof);
+        $__internal_7bbe4b072b8326a392ac5cb74578483d8030101dc05a5351e8415f8047d53958->leave($__internal_7bbe4b072b8326a392ac5cb74578483d8030101dc05a5351e8415f8047d53958_prof);
 
     }
 
@@ -98,7 +98,7 @@ class __TwigTemplate_93b9b376b82f1b5573bf6d86a4864d00080a94be13173700a97068bb58b
         <input type=\"submit\" class=\"btn btn-primary btn1\"  value=\"Postular\" />
     {{ form_end(form) }}
 
-    <a href=\"{{ path('application_index') }}\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
+    <a href=\"{{ path('fondolinea_index') }}\" class=\"btn btn-danger btn2\" role=\"button\" >Cancelar</a>
 {% endblock %}
 ", "fondolinea/new.html.twig", "/Users/erick/Documents/Gantt/gantter/app/Resources/views/fondolinea/new.html.twig");
     }
